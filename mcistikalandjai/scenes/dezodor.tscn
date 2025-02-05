@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://vxiu6yjgbpew"]
+
+[ext_resource type="Texture2D" uid="uid://cp07b07euj2y1" path="res://assets/dezodor.png" id="1_usppt"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_hetbo"]
+radius = 67.0
+height = 528.0
+
+[node name="dezodor" type="AnimatableBody2D"]
+
+[node name="Dezodor" type="Sprite2D" parent="."]
+position = Vector2(31, 20)
+rotation = 1.5708
+texture = ExtResource("1_usppt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(23, 18)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_hetbo")

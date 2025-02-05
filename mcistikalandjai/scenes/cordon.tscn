@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://dlv2oqipt3vh2"]
+
+[ext_resource type="Texture2D" uid="uid://qi1iwrl8ns3m" path="res://assets/cordon.png" id="1_niqe0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5jl0p"]
+size = Vector2(505, 488)
+
+[node name="cordon" type="AnimatableBody2D"]
+
+[node name="Cordon" type="Sprite2D" parent="."]
+position = Vector2(37, 56)
+texture = ExtResource("1_niqe0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(34.5, 62)
+shape = SubResource("RectangleShape2D_5jl0p")

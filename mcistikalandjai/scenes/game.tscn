@@ -1,10 +1,28 @@
-[gd_scene load_steps=10 format=3 uid="uid://x3408vxotqj"]
+[gd_scene load_steps=16 format=3 uid="uid://x3408vxotqj"]
 
 [ext_resource type="PackedScene" uid="uid://c5ag6q51ckqel" path="res://scenes/player.tscn" id="1_wpt44"]
 [ext_resource type="PackedScene" uid="uid://bfja8yt81uh63" path="res://scenes/panel.tscn" id="2_qi7us"]
 [ext_resource type="PackedScene" uid="uid://o5ekqncrmsf5" path="res://scenes/killzone.tscn" id="3_2cj8q"]
 [ext_resource type="PackedScene" uid="uid://ntwnos7nb0k1" path="res://scenes/panel_02.tscn" id="4_r8u4m"]
-[ext_resource type="PackedScene" uid="uid://cb8tr8d0moawe" path="res://scenes/szint.tscn" id="5_1aqgi"]
+[ext_resource type="PackedScene" uid="uid://vxiu6yjgbpew" path="res://scenes/dezodor.tscn" id="5_8kp40"]
+[ext_resource type="PackedScene" uid="uid://d21kx6sibdbkb" path="res://scenes/cocacola.tscn" id="7_1qesu"]
+[ext_resource type="Texture2D" uid="uid://qi1iwrl8ns3m" path="res://assets/cordon.png" id="8_iw1ev"]
+[ext_resource type="PackedScene" uid="uid://drops2dt7lvdt" path="res://scenes/tuborg.tscn" id="8_q8vx4"]
+
+[sub_resource type="Animation" id="Animation_57kv4"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Panel02:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1750, 285)]
+}
 
 [sub_resource type="Animation" id="Animation_lttb0"]
 resource_name = "new_animation"
@@ -13,53 +31,14 @@ loop_mode = 2
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("AnimationPlayer/Szint:position")
+tracks/0/path = NodePath("Panel02:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0, 1.5),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(1750, -284), Vector2(2498, 106)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("AnimationPlayer/Panel02:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 1.5),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(1750, 285), Vector2(2498, 675)]
-}
-
-[sub_resource type="Animation" id="Animation_57kv4"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("AnimationPlayer/Szint:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(1750, -284)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("AnimationPlayer/Panel02:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(1750, 285)]
+"values": [Vector2(1696, 151), Vector2(2136, 155)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_vv62x"]
@@ -70,6 +49,44 @@ _data = {
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_c0lem"]
 
+[sub_resource type="Animation" id="Animation_y6ict"]
+resource_name = "Coca"
+length = 4.0
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimationPlayer2/cocacola:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(4565, -1490), Vector2(2899, -1885)]
+}
+
+[sub_resource type="Animation" id="Animation_c2n1x"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimationPlayer2/cocacola:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(4565, -1490)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_6sce3"]
+_data = {
+"Coca": SubResource("Animation_y6ict"),
+"RESET": SubResource("Animation_c2n1x")
+}
+
 [node name="Game" type="Node2D"]
 position = Vector2(304, -561)
 
@@ -78,12 +95,6 @@ libraries = {
 "": SubResource("AnimationLibrary_vv62x")
 }
 autoplay = "new_animation"
-
-[node name="Szint" parent="AnimationPlayer" instance=ExtResource("5_1aqgi")]
-position = Vector2(1750, -284)
-
-[node name="Panel02" parent="AnimationPlayer" instance=ExtResource("4_r8u4m")]
-position = Vector2(1750, 285)
 
 [node name="player" parent="." instance=ExtResource("1_wpt44")]
 position = Vector2(-40, 85)
@@ -102,4 +113,40 @@ position = Vector2(-231, 1212)
 shape = SubResource("WorldBoundaryShape2D_c0lem")
 
 [node name="Panel02" parent="." instance=ExtResource("4_r8u4m")]
-position = Vector2(732, 780)
+position = Vector2(1750, 285)
+
+[node name="Panel03" parent="." instance=ExtResource("4_r8u4m")]
+position = Vector2(3090, 265)
+
+[node name="dezodor" parent="." instance=ExtResource("5_8kp40")]
+position = Vector2(4354, -145)
+rotation = -0.785397
+
+[node name="Panel04" parent="." instance=ExtResource("4_r8u4m")]
+position = Vector2(718, 709)
+
+[node name="tuborg" parent="." instance=ExtResource("8_q8vx4")]
+position = Vector2(2991, -1353)
+
+[node name="tuborg" parent="tuborg" instance=ExtResource("8_q8vx4")]
+position = Vector2(-650, -178)
+
+[node name="tuborg" parent="tuborg/tuborg" instance=ExtResource("8_q8vx4")]
+position = Vector2(343, -1118)
+rotation = 3.14159
+
+[node name="AnimationPlayer2" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_6sce3")
+}
+autoplay = "Coca"
+
+[node name="cocacola" parent="AnimationPlayer2" instance=ExtResource("7_1qesu")]
+position = Vector2(4565, -1490)
+rotation = -1.0472
+
+[node name="Cordon" type="Sprite2D" parent="."]
+show_behind_parent = true
+position = Vector2(5321, -466)
+rotation = -0.785397
+texture = ExtResource("8_iw1ev")

@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://drops2dt7lvdt"]
+
+[ext_resource type="Texture2D" uid="uid://dkgp0ht7f30cc" path="res://assets/Tuborg.png" id="1_makre"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_obikl"]
+radius = 70.0
+height = 380.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_cdvxh"]
+radius = 104.0
+height = 732.0
+
+[node name="tuborg" type="AnimatableBody2D"]
+position = Vector2(-114, -25)
+
+[node name="Tuborg" type="Sprite2D" parent="."]
+position = Vector2(-2.00002, -14)
+scale = Vector2(2.024, 2.024)
+texture = ExtResource("1_makre")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(-8, -322)
+shape = SubResource("CapsuleShape2D_obikl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-4, 136)
+shape = SubResource("CapsuleShape2D_cdvxh")

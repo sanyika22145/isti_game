@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://d21kx6sibdbkb"]
+
+[ext_resource type="Texture2D" uid="uid://cctqt82n5b78i" path="res://assets/coca-cola.png" id="1_m6ysh"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_as7fd"]
+radius = 71.0
+height = 500.0
+
+[node name="cocacola" type="AnimatableBody2D"]
+
+[node name="Coca-cola" type="Sprite2D" parent="."]
+position = Vector2(7, 33)
+texture = ExtResource("1_m6ysh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(5, 36)
+shape = SubResource("CapsuleShape2D_as7fd")
