@@ -1,0 +1,105 @@
+[gd_scene load_steps=10 format=3 uid="uid://x3408vxotqj"]
+
+[ext_resource type="PackedScene" uid="uid://c5ag6q51ckqel" path="res://scenes/player.tscn" id="1_wpt44"]
+[ext_resource type="PackedScene" uid="uid://bfja8yt81uh63" path="res://scenes/panel.tscn" id="2_qi7us"]
+[ext_resource type="PackedScene" uid="uid://o5ekqncrmsf5" path="res://scenes/killzone.tscn" id="3_2cj8q"]
+[ext_resource type="PackedScene" uid="uid://ntwnos7nb0k1" path="res://scenes/panel_02.tscn" id="4_r8u4m"]
+[ext_resource type="PackedScene" uid="uid://cb8tr8d0moawe" path="res://scenes/szint.tscn" id="5_1aqgi"]
+
+[sub_resource type="Animation" id="Animation_lttb0"]
+resource_name = "new_animation"
+length = 1.5
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimationPlayer/Szint:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1750, -284), Vector2(2498, 106)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimationPlayer/Panel02:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1750, 285), Vector2(2498, 675)]
+}
+
+[sub_resource type="Animation" id="Animation_57kv4"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimationPlayer/Szint:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1750, -284)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimationPlayer/Panel02:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1750, 285)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_vv62x"]
+_data = {
+"RESET": SubResource("Animation_57kv4"),
+"new_animation": SubResource("Animation_lttb0")
+}
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_c0lem"]
+
+[node name="Game" type="Node2D"]
+position = Vector2(304, -561)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_vv62x")
+}
+autoplay = "new_animation"
+
+[node name="Szint" parent="AnimationPlayer" instance=ExtResource("5_1aqgi")]
+position = Vector2(1750, -284)
+
+[node name="Panel02" parent="AnimationPlayer" instance=ExtResource("4_r8u4m")]
+position = Vector2(1750, 285)
+
+[node name="player" parent="." instance=ExtResource("1_wpt44")]
+position = Vector2(-40, 85)
+
+[node name="Camera2D" type="Camera2D" parent="player"]
+zoom = Vector2(0.5, 0.5)
+limit_bottom = 450
+
+[node name="Panel" parent="." instance=ExtResource("2_qi7us")]
+position = Vector2(-154, 489)
+
+[node name="Killzone" parent="." instance=ExtResource("3_2cj8q")]
+position = Vector2(-231, 1212)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone"]
+shape = SubResource("WorldBoundaryShape2D_c0lem")
+
+[node name="Panel02" parent="." instance=ExtResource("4_r8u4m")]
+position = Vector2(732, 780)

@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://ntwnos7nb0k1"]
+
+[ext_resource type="Texture2D" uid="uid://dj1tfbg6g8pc7" path="res://assets/keszPanel.png" id="1_ooope"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ul72k"]
+size = Vector2(569.5, 867)
+
+[node name="Panel02" type="AnimatableBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(227, 68)
+texture = ExtResource("1_ooope")
+region_enabled = true
+region_rect = Rect2(421, 2, 575, 974)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(229.25, 122)
+shape = SubResource("RectangleShape2D_ul72k")
