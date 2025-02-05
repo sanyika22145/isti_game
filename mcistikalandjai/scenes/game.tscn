@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://x3408vxotqj"]
+[gd_scene load_steps=18 format=3 uid="uid://x3408vxotqj"]
 
 [ext_resource type="PackedScene" uid="uid://c5ag6q51ckqel" path="res://scenes/player.tscn" id="1_wpt44"]
 [ext_resource type="PackedScene" uid="uid://bfja8yt81uh63" path="res://scenes/panel.tscn" id="2_qi7us"]
@@ -8,6 +8,8 @@
 [ext_resource type="PackedScene" uid="uid://d21kx6sibdbkb" path="res://scenes/cocacola.tscn" id="7_1qesu"]
 [ext_resource type="Texture2D" uid="uid://qi1iwrl8ns3m" path="res://assets/cordon.png" id="8_iw1ev"]
 [ext_resource type="PackedScene" uid="uid://drops2dt7lvdt" path="res://scenes/tuborg.tscn" id="8_q8vx4"]
+[ext_resource type="PackedScene" uid="uid://50pnstknpd0y" path="res://scenes/taviranyito.tscn" id="9_1kwer"]
+[ext_resource type="PackedScene" uid="uid://chcm1lcefsvch" path="res://scenes/pepsi.tscn" id="10_qo3sv"]
 
 [sub_resource type="Animation" id="Animation_57kv4"]
 length = 0.001
@@ -150,3 +152,9 @@ show_behind_parent = true
 position = Vector2(5321, -466)
 rotation = -0.785397
 texture = ExtResource("8_iw1ev")
+
+[node name="taviranyito" parent="." instance=ExtResource("9_1kwer")]
+position = Vector2(1932, -2275)
+
+[node name="pepsi" parent="." instance=ExtResource("10_qo3sv")]
+position = Vector2(1613, -1535)
