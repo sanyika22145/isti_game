@@ -1,19 +1,23 @@
 [gd_scene load_steps=2 format=3 uid="uid://b2crwcxyro7y3"]
 
-[sub_resource type="SystemFont" id="SystemFont_ybsb2"]
+[ext_resource type="FontFile" uid="uid://dmt8txgd6elfv" path="res://assets/argentum-sans.black.ttf" id="1_ekh2i"]
 
 [node name="Scoreboard" type="CanvasLayer"]
 
 [node name="Score" type="Label" parent="."]
-anchors_preset = -1
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 1046.0
+offset_left = 1021.0
 offset_top = 25.0
-offset_right = -33.0
+offset_right = -58.0
 offset_bottom = -551.0
+grow_horizontal = 2
+grow_vertical = 2
 scale = Vector2(1, 1.02351)
-theme_override_fonts/font = SubResource("SystemFont_ybsb2")
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("1_ekh2i")
 theme_override_font_sizes/font_size = 40
 text = "0"
 horizontal_alignment = 2
