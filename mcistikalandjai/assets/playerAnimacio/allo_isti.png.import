@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cbqixx6pxw0g8"
-path="res://.godot/imported/allo_isti.png-bfb32bd40d6906269712cdcec7f69758.ctex"
+path="res://.godot/imported/allo_isti.png-80532cb7fc861ea65e83f9a69e8d497d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/playerAnimation/allo_isti.png"
-dest_files=["res://.godot/imported/allo_isti.png-bfb32bd40d6906269712cdcec7f69758.ctex"]
+source_file="res://assets/playerAnimacio/allo_isti.png"
+dest_files=["res://.godot/imported/allo_isti.png-80532cb7fc861ea65e83f9a69e8d497d.ctex"]
 
 [params]
 
