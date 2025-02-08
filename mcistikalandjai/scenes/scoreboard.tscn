@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://b2crwcxyro7y3"]
+
+[node name="Scoreboard" type="CanvasLayer"]
+
+[node name="Score" type="Label" parent="."]
+anchors_preset = -1
+anchor_right = 0.035
+anchor_bottom = 0.018
+offset_left = 1046.0
+offset_top = 25.0
+offset_right = 1078.68
+offset_bottom = 85.336
+scale = Vector2(1, 1.02351)
+theme_override_font_sizes/font_size = 40
+text = "0"
+horizontal_alignment = 2

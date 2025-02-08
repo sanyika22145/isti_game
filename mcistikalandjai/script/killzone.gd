@@ -13,7 +13,7 @@ func _on_body_entered(body: Node2D) -> void:
 	elif randomAudioSzam == 2:
 		kurvaanyadat_2.play()
 		await kurvaanyadat_2.finished
-	print("You died!")
+	GameManager.score = 0
 	
 	timer.start()
 

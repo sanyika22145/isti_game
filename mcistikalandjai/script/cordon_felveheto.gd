@@ -1,5 +1,6 @@
 extends Sprite2D
 @onready var pickup: AudioStreamPlayer = $pickup
+@onready var area_2d: Area2D = $Area2D
 
 
 # Called when the node enters the scene tree for the first time.
@@ -15,11 +16,10 @@ func _process(delta: float) -> void:
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.is_in_group('player'):
-		GameManager.score += 100
-		print(GameManager.score)
+		GameManager.score += 3
 		pickup.play()
 		visible = false
-		body.set_collision_layer_value(1, false) 
-		body.set_collision_layer_value(10, true)
+		$Area2D.collision_layer = 0
+		$Area2D.collision_mask = 0
 		await pickup.finished
 		queue_free()
