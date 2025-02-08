@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://x3408vxotqj"]
+[gd_scene load_steps=22 format=3 uid="uid://x3408vxotqj"]
 
 [ext_resource type="PackedScene" uid="uid://c5ag6q51ckqel" path="res://scenes/player.tscn" id="1_wpt44"]
 [ext_resource type="PackedScene" uid="uid://dm8wfq4noafwr" path="res://scenes/targyak/cigi_felveheto.tscn" id="2_ixso0"]
@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://chcm1lcefsvch" path="res://scenes/platformok/pepsi.tscn" id="10_qo3sv"]
 [ext_resource type="PackedScene" uid="uid://ci372cvpo8tn8" path="res://scenes/targyak/cordon_felveheto.tscn" id="11_dsdnw"]
 [ext_resource type="PackedScene" uid="uid://cmus63ju7a5wr" path="res://scenes/targyak/pizza_felveheto.tscn" id="12_fioov"]
+[ext_resource type="PackedScene" uid="uid://bwo0nhicc0r3n" path="res://scenes/targyak/tuborg_felveheto.tscn" id="14_fh723"]
 
 [sub_resource type="Animation" id="Animation_57kv4"]
 length = 0.001
@@ -177,3 +178,6 @@ position = Vector2(1613, -1535)
 
 [node name="pizzaFelveheto" parent="." instance=ExtResource("12_fioov")]
 position = Vector2(606, 130)
+
+[node name="pizzaFelveheto2" parent="." instance=ExtResource("14_fh723")]
+position = Vector2(1222, 194)

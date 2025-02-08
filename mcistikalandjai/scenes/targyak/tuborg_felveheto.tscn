@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://bwo0nhicc0r3n"]
+
+[ext_resource type="Texture2D" uid="uid://dkgp0ht7f30cc" path="res://assets/targyak/Tuborg.png" id="1_46u0u"]
+[ext_resource type="Script" path="res://script/felveheto.gd" id="2_ubb56"]
+[ext_resource type="AudioStream" uid="uid://df23ipp0e1vn5" path="res://assets/audio/tuborg.mp3" id="3_p7qr0"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_fxj1w"]
+radius = 89.6257
+height = 537.754
+
+[node name="pizzaFelveheto" type="Sprite2D"]
+position = Vector2(1, -16)
+scale = Vector2(0.290095, 0.290095)
+texture = ExtResource("1_46u0u")
+script = ExtResource("2_ubb56")
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(403.316, -327.478)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-410.21, 324.031)
+shape = SubResource("CapsuleShape2D_fxj1w")
+
+[node name="pickup" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_p7qr0")
+volume_db = 20.252
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
