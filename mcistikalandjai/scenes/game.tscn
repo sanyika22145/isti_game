@@ -158,3 +158,6 @@ position = Vector2(1932, -2275)
 
 [node name="pepsi" parent="." instance=ExtResource("10_qo3sv")]
 position = Vector2(1613, -1535)
+
+[node name="pepsi" parent="pepsi" instance=ExtResource("10_qo3sv")]
+position = Vector2(-641, -1481)
