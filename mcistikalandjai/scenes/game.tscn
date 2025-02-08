@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://x3408vxotqj"]
+[gd_scene load_steps=26 format=3 uid="uid://x3408vxotqj"]
 
 [ext_resource type="PackedScene" uid="uid://c5ag6q51ckqel" path="res://scenes/player.tscn" id="1_wpt44"]
 [ext_resource type="PackedScene" uid="uid://dm8wfq4noafwr" path="res://scenes/targyak/cigi_felveheto.tscn" id="2_ixso0"]
@@ -17,6 +17,7 @@
 [ext_resource type="PackedScene" uid="uid://du4pawiyj3xc0" path="res://scenes/targyak/erospista_felveheto.tscn" id="15_lw2bx"]
 [ext_resource type="PackedScene" uid="uid://d3y6c1jmsjq8t" path="res://scenes/targyak/mirelit_felveheto.tscn" id="16_xlla4"]
 [ext_resource type="Texture2D" uid="uid://dg6getqfglgae" path="res://assets/targyak/mirelit.png" id="17_a6102"]
+[ext_resource type="Texture2D" uid="uid://dj1tfbg6g8pc7" path="res://assets/targyak/keszPanel.png" id="18_cj32a"]
 
 [sub_resource type="Animation" id="Animation_57kv4"]
 length = 0.001
@@ -106,7 +107,7 @@ libraries = {
 autoplay = "new_animation"
 
 [node name="Panel04" parent="AnimationPlayer" instance=ExtResource("4_r8u4m")]
-position = Vector2(1022, 148)
+position = Vector2(1017, -233)
 
 [node name="cordonFelveheto" parent="AnimationPlayer" instance=ExtResource("2_ixso0")]
 position = Vector2(3588, -803)
@@ -133,7 +134,7 @@ shape = SubResource("WorldBoundaryShape2D_c0lem")
 position = Vector2(1750, 285)
 
 [node name="Panel03" parent="." instance=ExtResource("4_r8u4m")]
-position = Vector2(3090, 265)
+position = Vector2(2981, 384)
 
 [node name="dezodor" parent="." instance=ExtResource("5_8kp40")]
 position = Vector2(4354, -145)
@@ -169,21 +170,39 @@ position = Vector2(1100, -2935)
 position = Vector2(1613, -1535)
 
 [node name="pizzaFelveheto" parent="." instance=ExtResource("12_fioov")]
-position = Vector2(1006, 173)
+position = Vector2(2209, -236)
 
 [node name="pizzaFelveheto2" parent="." instance=ExtResource("14_fh723")]
-position = Vector2(1222, 194)
+position = Vector2(5046, -1086)
 
 [node name="cordonFelveheto3" parent="." instance=ExtResource("15_lw2bx")]
 position = Vector2(-121, -63)
 
 [node name="cordonFelveheto4" parent="." instance=ExtResource("16_xlla4")]
-position = Vector2(752, 168)
+position = Vector2(847, -132)
 
 [node name="cordonFelveheto" parent="." instance=ExtResource("11_dsdnw")]
-position = Vector2(226, -49)
+position = Vector2(4217, -506)
 
 [node name="Mirelit" type="Sprite2D" parent="."]
 position = Vector2(5311, -568)
-rotation = 0.4988
+rotation = 0.853954
 texture = ExtResource("17_a6102")
+
+[node name="KeszPanel" type="Sprite2D" parent="."]
+modulate = Color(0.433937, 0.441493, 0.435758, 1)
+z_index = -5
+position = Vector2(284, 773)
+texture = ExtResource("18_cj32a")
+
+[node name="KeszPanel3" type="Sprite2D" parent="."]
+modulate = Color(0.433937, 0.441493, 0.435758, 1)
+z_index = -5
+position = Vector2(1542, 709)
+texture = ExtResource("18_cj32a")
+
+[node name="KeszPanel2" type="Sprite2D" parent="."]
+modulate = Color(0.433937, 0.441493, 0.435758, 1)
+z_index = -5
+position = Vector2(2567, 698)
+texture = ExtResource("18_cj32a")
