@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://d3y6c1jmsjq8t"]
+
+[ext_resource type="Texture2D" uid="uid://dg6getqfglgae" path="res://assets/targyak/mirelit.png" id="1_f7vet"]
+[ext_resource type="Script" path="res://script/felveheto.gd" id="2_rleqw"]
+[ext_resource type="AudioStream" uid="uid://f8ky11pe7vep" path="res://assets/audio/mirelit.mp3" id="3_g8d6l"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w2p8x"]
+size = Vector2(600.812, 682.003)
+
+[node name="cordonFelveheto" type="Sprite2D"]
+position = Vector2(3, 1)
+scale = Vector2(0.18475, 0.18475)
+texture = ExtResource("1_f7vet")
+script = ExtResource("2_rleqw")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-2.70635, -10.8254)
+shape = SubResource("RectangleShape2D_w2p8x")
+
+[node name="pickup" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_g8d6l")
+volume_db = 7.495
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

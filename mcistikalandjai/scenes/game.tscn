@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://x3408vxotqj"]
+[gd_scene load_steps=24 format=3 uid="uid://x3408vxotqj"]
 
 [ext_resource type="PackedScene" uid="uid://c5ag6q51ckqel" path="res://scenes/player.tscn" id="1_wpt44"]
 [ext_resource type="PackedScene" uid="uid://dm8wfq4noafwr" path="res://scenes/targyak/cigi_felveheto.tscn" id="2_ixso0"]
@@ -7,13 +7,14 @@
 [ext_resource type="PackedScene" uid="uid://ntwnos7nb0k1" path="res://scenes/platformok/panel_02.tscn" id="4_r8u4m"]
 [ext_resource type="PackedScene" uid="uid://vxiu6yjgbpew" path="res://scenes/platformok/dezodor.tscn" id="5_8kp40"]
 [ext_resource type="PackedScene" uid="uid://d21kx6sibdbkb" path="res://scenes/platformok/cocacola.tscn" id="7_1qesu"]
-[ext_resource type="Texture2D" uid="uid://qi1iwrl8ns3m" path="res://assets/targyak/cordon.png" id="8_iw1ev"]
 [ext_resource type="PackedScene" uid="uid://drops2dt7lvdt" path="res://scenes/platformok/tuborg.tscn" id="8_q8vx4"]
 [ext_resource type="PackedScene" uid="uid://50pnstknpd0y" path="res://scenes/platformok/taviranyito.tscn" id="9_1kwer"]
 [ext_resource type="PackedScene" uid="uid://chcm1lcefsvch" path="res://scenes/platformok/pepsi.tscn" id="10_qo3sv"]
 [ext_resource type="PackedScene" uid="uid://ci372cvpo8tn8" path="res://scenes/targyak/cordon_felveheto.tscn" id="11_dsdnw"]
 [ext_resource type="PackedScene" uid="uid://cmus63ju7a5wr" path="res://scenes/targyak/pizza_felveheto.tscn" id="12_fioov"]
 [ext_resource type="PackedScene" uid="uid://bwo0nhicc0r3n" path="res://scenes/targyak/tuborg_felveheto.tscn" id="14_fh723"]
+[ext_resource type="PackedScene" uid="uid://du4pawiyj3xc0" path="res://scenes/targyak/erospista_felveheto.tscn" id="15_lw2bx"]
+[ext_resource type="PackedScene" uid="uid://d3y6c1jmsjq8t" path="res://scenes/targyak/mirelit_felveheto.tscn" id="16_xlla4"]
 
 [sub_resource type="Animation" id="Animation_57kv4"]
 length = 0.001
@@ -93,6 +94,9 @@ _data = {
 "RESET": SubResource("Animation_c2n1x")
 }
 
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_6m3aj"]
+load_path = "res://.godot/imported/cordon.png-f3083edd8113c19ae78c1cfb9f9f15eb.ctex"
+
 [node name="Game" type="Node2D"]
 position = Vector2(304, -561)
 
@@ -106,7 +110,7 @@ autoplay = "new_animation"
 position = Vector2(1022, 148)
 
 [node name="cordonFelveheto" parent="AnimationPlayer" instance=ExtResource("2_ixso0")]
-position = Vector2(1127, -392)
+position = Vector2(3588, -803)
 
 [node name="player" parent="." instance=ExtResource("1_wpt44")]
 position = Vector2(-40, 85)
@@ -159,16 +163,10 @@ rotation = -1.0472
 show_behind_parent = true
 position = Vector2(5321, -466)
 rotation = -0.785397
-texture = ExtResource("8_iw1ev")
+texture = SubResource("CompressedTexture2D_6m3aj")
 
 [node name="taviranyito" parent="." instance=ExtResource("9_1kwer")]
 position = Vector2(1932, -2275)
-
-[node name="cordonFelveheto" parent="." instance=ExtResource("11_dsdnw")]
-position = Vector2(992, 189)
-
-[node name="cordonFelveheto2" parent="." instance=ExtResource("11_dsdnw")]
-position = Vector2(131, -35)
 
 [node name="pepsi2" parent="." instance=ExtResource("10_qo3sv")]
 position = Vector2(1100, -2935)
@@ -177,7 +175,16 @@ position = Vector2(1100, -2935)
 position = Vector2(1613, -1535)
 
 [node name="pizzaFelveheto" parent="." instance=ExtResource("12_fioov")]
-position = Vector2(606, 130)
+position = Vector2(1006, 173)
 
 [node name="pizzaFelveheto2" parent="." instance=ExtResource("14_fh723")]
 position = Vector2(1222, 194)
+
+[node name="cordonFelveheto3" parent="." instance=ExtResource("15_lw2bx")]
+position = Vector2(-121, -63)
+
+[node name="cordonFelveheto4" parent="." instance=ExtResource("16_xlla4")]
+position = Vector2(752, 168)
+
+[node name="cordonFelveheto" parent="." instance=ExtResource("11_dsdnw")]
+position = Vector2(226, -49)

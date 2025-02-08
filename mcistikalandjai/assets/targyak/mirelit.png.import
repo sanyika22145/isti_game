@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://qi1iwrl8ns3m"
-path="res://.godot/imported/cordon.png-f3083edd8113c19ae78c1cfb9f9f15eb.ctex"
+uid="uid://dg6getqfglgae"
+path="res://.godot/imported/mirelit.png-2ed7f3876e48057757e7747eb84ba95c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/targyak/cordon.png"
-dest_files=["res://.godot/imported/cordon.png-f3083edd8113c19ae78c1cfb9f9f15eb.ctex"]
+source_file="res://assets/targyak/mirelit.png"
+dest_files=["res://.godot/imported/mirelit.png-2ed7f3876e48057757e7747eb84ba95c.ctex"]
 
 [params]
 
