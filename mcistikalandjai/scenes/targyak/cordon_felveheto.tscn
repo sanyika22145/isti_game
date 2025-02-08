@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://ci372cvpo8tn8"]
+
+[ext_resource type="Texture2D" uid="uid://qi1iwrl8ns3m" path="res://assets/targyak/cordon.png" id="1_pfywq"]
+[ext_resource type="Script" path="res://script/cordon_felveheto.gd" id="2_bqpnq"]
+[ext_resource type="AudioStream" uid="uid://bu8t48gi4luwj" path="res://assets/audio/kordonblu.mp3" id="3_qt8yv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w2p8x"]
+size = Vector2(465.241, 454.545)
+
+[node name="cordonFelveheto" type="Sprite2D"]
+position = Vector2(-2, 2)
+scale = Vector2(0.187, 0.187)
+texture = ExtResource("1_pfywq")
+script = ExtResource("2_bqpnq")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(2.67378, 2.67381)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_w2p8x")
+
+[node name="pickup" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_qt8yv")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

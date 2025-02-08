@@ -17,7 +17,7 @@ volume_db = 1.874
 
 [node name="kurvaanyadat2" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("2_ofyvu")
-volume_db = -11.243
+volume_db = -8.432
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

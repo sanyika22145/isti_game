@@ -15,9 +15,17 @@ run/main_scene="res://scenes/game.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+GameManager="*res://scenes/game_manager.tscn"
+
 [dotnet]
 
 project/assembly_name="McIstiKalandjai"
+
+[global_group]
+
+player=""
 
 [input]
 

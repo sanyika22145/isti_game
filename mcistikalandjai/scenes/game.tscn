@@ -1,15 +1,16 @@
-[gd_scene load_steps=18 format=3 uid="uid://x3408vxotqj"]
+[gd_scene load_steps=19 format=3 uid="uid://x3408vxotqj"]
 
 [ext_resource type="PackedScene" uid="uid://c5ag6q51ckqel" path="res://scenes/player.tscn" id="1_wpt44"]
-[ext_resource type="PackedScene" uid="uid://bfja8yt81uh63" path="res://scenes/panel.tscn" id="2_qi7us"]
+[ext_resource type="PackedScene" uid="uid://bfja8yt81uh63" path="res://scenes/platformok/panel.tscn" id="2_qi7us"]
 [ext_resource type="PackedScene" uid="uid://o5ekqncrmsf5" path="res://scenes/killzone.tscn" id="3_2cj8q"]
-[ext_resource type="PackedScene" uid="uid://ntwnos7nb0k1" path="res://scenes/panel_02.tscn" id="4_r8u4m"]
-[ext_resource type="PackedScene" uid="uid://vxiu6yjgbpew" path="res://scenes/targyak/dezodor.tscn" id="5_8kp40"]
-[ext_resource type="PackedScene" uid="uid://d21kx6sibdbkb" path="res://scenes/targyak/cocacola.tscn" id="7_1qesu"]
+[ext_resource type="PackedScene" uid="uid://ntwnos7nb0k1" path="res://scenes/platformok/panel_02.tscn" id="4_r8u4m"]
+[ext_resource type="PackedScene" uid="uid://vxiu6yjgbpew" path="res://scenes/platformok/dezodor.tscn" id="5_8kp40"]
+[ext_resource type="PackedScene" uid="uid://d21kx6sibdbkb" path="res://scenes/platformok/cocacola.tscn" id="7_1qesu"]
 [ext_resource type="Texture2D" uid="uid://qi1iwrl8ns3m" path="res://assets/targyak/cordon.png" id="8_iw1ev"]
-[ext_resource type="PackedScene" uid="uid://drops2dt7lvdt" path="res://scenes/targyak/tuborg.tscn" id="8_q8vx4"]
-[ext_resource type="PackedScene" uid="uid://50pnstknpd0y" path="res://scenes/targyak/taviranyito.tscn" id="9_1kwer"]
-[ext_resource type="PackedScene" uid="uid://chcm1lcefsvch" path="res://scenes/targyak/pepsi.tscn" id="10_qo3sv"]
+[ext_resource type="PackedScene" uid="uid://drops2dt7lvdt" path="res://scenes/platformok/tuborg.tscn" id="8_q8vx4"]
+[ext_resource type="PackedScene" uid="uid://50pnstknpd0y" path="res://scenes/platformok/taviranyito.tscn" id="9_1kwer"]
+[ext_resource type="PackedScene" uid="uid://chcm1lcefsvch" path="res://scenes/platformok/pepsi.tscn" id="10_qo3sv"]
+[ext_resource type="PackedScene" uid="uid://ci372cvpo8tn8" path="res://scenes/targyak/cordon_felveheto.tscn" id="11_dsdnw"]
 
 [sub_resource type="Animation" id="Animation_57kv4"]
 length = 0.001
@@ -100,6 +101,7 @@ autoplay = "new_animation"
 
 [node name="player" parent="." instance=ExtResource("1_wpt44")]
 position = Vector2(-40, 85)
+collision_layer = 3
 
 [node name="Camera2D" type="Camera2D" parent="player"]
 zoom = Vector2(0.5, 0.5)
@@ -127,15 +129,15 @@ rotation = -0.785397
 [node name="Panel04" parent="." instance=ExtResource("4_r8u4m")]
 position = Vector2(718, 709)
 
+[node name="tuborg3" parent="." instance=ExtResource("8_q8vx4")]
+position = Vector2(2684, -2649)
+rotation = 3.14159
+
+[node name="tuborg2" parent="." instance=ExtResource("8_q8vx4")]
+position = Vector2(2341, -1531)
+
 [node name="tuborg" parent="." instance=ExtResource("8_q8vx4")]
 position = Vector2(2991, -1353)
-
-[node name="tuborg" parent="tuborg" instance=ExtResource("8_q8vx4")]
-position = Vector2(-650, -178)
-
-[node name="tuborg" parent="tuborg/tuborg" instance=ExtResource("8_q8vx4")]
-position = Vector2(343, -1118)
-rotation = 3.14159
 
 [node name="AnimationPlayer2" type="AnimationPlayer" parent="."]
 libraries = {
@@ -147,7 +149,7 @@ autoplay = "Coca"
 position = Vector2(4565, -1490)
 rotation = -1.0472
 
-[node name="Cordon" type="Sprite2D" parent="."]
+[node name="cordonKamu" type="Sprite2D" parent="."]
 show_behind_parent = true
 position = Vector2(5321, -466)
 rotation = -0.785397
@@ -156,8 +158,11 @@ texture = ExtResource("8_iw1ev")
 [node name="taviranyito" parent="." instance=ExtResource("9_1kwer")]
 position = Vector2(1932, -2275)
 
+[node name="cordonFelveheto" parent="." instance=ExtResource("11_dsdnw")]
+position = Vector2(992, 189)
+
+[node name="pepsi2" parent="." instance=ExtResource("10_qo3sv")]
+position = Vector2(1100, -2935)
+
 [node name="pepsi" parent="." instance=ExtResource("10_qo3sv")]
 position = Vector2(1613, -1535)
-
-[node name="pepsi" parent="pepsi" instance=ExtResource("10_qo3sv")]
-position = Vector2(-513, -1400)
