@@ -3,7 +3,7 @@ extends CharacterBody2D
 
 const SPEED = 1000.0
 const JUMP_VELOCITY = -1800.0
-
+@onready var ugras_audio: AudioStreamPlayer = $ugrasAudio
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 
 func _physics_process(delta: float) -> void:
@@ -13,6 +13,7 @@ func _physics_process(delta: float) -> void:
 
 	# Handle jump.
 	if Input.is_action_just_pressed("jump") and is_on_floor():
+		ugras_audio.play()
 		velocity.y = JUMP_VELOCITY
 
 	# Get the input direction and handle the movement/deceleration.
