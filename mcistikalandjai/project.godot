@@ -13,7 +13,6 @@ config_version=5
 config/name="McIstiKalandjai"
 run/main_scene="res://scenes/game.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
-config/icon="res://icon.svg"
 
 [autoload]
 
@@ -26,6 +25,7 @@ project/assembly_name="McIstiKalandjai"
 [global_group]
 
 player=""
+camera=""
 
 [input]
 

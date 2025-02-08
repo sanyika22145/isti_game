@@ -1,10 +1,11 @@
-[gd_scene load_steps=24 format=3 uid="uid://x3408vxotqj"]
+[gd_scene load_steps=25 format=3 uid="uid://x3408vxotqj"]
 
 [ext_resource type="PackedScene" uid="uid://c5ag6q51ckqel" path="res://scenes/player.tscn" id="1_wpt44"]
 [ext_resource type="PackedScene" uid="uid://dm8wfq4noafwr" path="res://scenes/targyak/cigi_felveheto.tscn" id="2_ixso0"]
 [ext_resource type="PackedScene" uid="uid://bfja8yt81uh63" path="res://scenes/platformok/panel.tscn" id="2_qi7us"]
 [ext_resource type="PackedScene" uid="uid://o5ekqncrmsf5" path="res://scenes/killzone.tscn" id="3_2cj8q"]
 [ext_resource type="PackedScene" uid="uid://ntwnos7nb0k1" path="res://scenes/platformok/panel_02.tscn" id="4_r8u4m"]
+[ext_resource type="Script" path="res://script/camera_2d.gd" id="4_wep1i"]
 [ext_resource type="PackedScene" uid="uid://vxiu6yjgbpew" path="res://scenes/platformok/dezodor.tscn" id="5_8kp40"]
 [ext_resource type="PackedScene" uid="uid://d21kx6sibdbkb" path="res://scenes/platformok/cocacola.tscn" id="7_1qesu"]
 [ext_resource type="PackedScene" uid="uid://drops2dt7lvdt" path="res://scenes/platformok/tuborg.tscn" id="8_q8vx4"]
@@ -15,6 +16,7 @@
 [ext_resource type="PackedScene" uid="uid://bwo0nhicc0r3n" path="res://scenes/targyak/tuborg_felveheto.tscn" id="14_fh723"]
 [ext_resource type="PackedScene" uid="uid://du4pawiyj3xc0" path="res://scenes/targyak/erospista_felveheto.tscn" id="15_lw2bx"]
 [ext_resource type="PackedScene" uid="uid://d3y6c1jmsjq8t" path="res://scenes/targyak/mirelit_felveheto.tscn" id="16_xlla4"]
+[ext_resource type="Texture2D" uid="uid://dg6getqfglgae" path="res://assets/targyak/mirelit.png" id="17_a6102"]
 
 [sub_resource type="Animation" id="Animation_57kv4"]
 length = 0.001
@@ -94,9 +96,6 @@ _data = {
 "RESET": SubResource("Animation_c2n1x")
 }
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_6m3aj"]
-load_path = "res://.godot/imported/cordon.png-f3083edd8113c19ae78c1cfb9f9f15eb.ctex"
-
 [node name="Game" type="Node2D"]
 position = Vector2(304, -561)
 
@@ -116,9 +115,10 @@ position = Vector2(3588, -803)
 position = Vector2(-40, 85)
 collision_layer = 3
 
-[node name="Camera2D" type="Camera2D" parent="player"]
+[node name="Camera2D" type="Camera2D" parent="player" groups=["camera"]]
 zoom = Vector2(0.5, 0.5)
 limit_bottom = 450
+script = ExtResource("4_wep1i")
 
 [node name="Panel" parent="." instance=ExtResource("2_qi7us")]
 position = Vector2(-154, 489)
@@ -159,12 +159,6 @@ autoplay = "Coca"
 position = Vector2(4565, -1490)
 rotation = -1.0472
 
-[node name="cordonKamu" type="Sprite2D" parent="."]
-show_behind_parent = true
-position = Vector2(5321, -466)
-rotation = -0.785397
-texture = SubResource("CompressedTexture2D_6m3aj")
-
 [node name="taviranyito" parent="." instance=ExtResource("9_1kwer")]
 position = Vector2(1932, -2275)
 
@@ -188,3 +182,8 @@ position = Vector2(752, 168)
 
 [node name="cordonFelveheto" parent="." instance=ExtResource("11_dsdnw")]
 position = Vector2(226, -49)
+
+[node name="Mirelit" type="Sprite2D" parent="."]
+position = Vector2(5311, -568)
+rotation = 0.4988
+texture = ExtResource("17_a6102")
