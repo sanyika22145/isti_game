@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://o7rqawt64bu"
+path="res://.godot/imported/MC Isti - kilogram gram.mp3-795f90cde572eb726ef69a471fa2f79a.mp3str"
+
+[deps]
+
+source_file="res://assets/audio/MC Isti - kilogram gram.mp3"
+dest_files=["res://.godot/imported/MC Isti - kilogram gram.mp3-795f90cde572eb726ef69a471fa2f79a.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,9 +1,16 @@
-[gd_scene load_steps=3 format=3 uid="uid://cfje6wok8ua0q"]
+[gd_scene load_steps=4 format=3 uid="uid://cfje6wok8ua0q"]
 
 [ext_resource type="Script" path="res://script/game_manager.gd" id="1_2sx6w"]
 [ext_resource type="PackedScene" uid="uid://b2crwcxyro7y3" path="res://scenes/scoreboard.tscn" id="2_iqe1n"]
+[ext_resource type="AudioStream" uid="uid://o7rqawt64bu" path="res://assets/audio/MC Isti - kilogram gram.mp3" id="3_xbk6k"]
 
 [node name="GameManager" type="Node"]
 script = ExtResource("1_2sx6w")
 
 [node name="Scoreboard" parent="." instance=ExtResource("2_iqe1n")]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_xbk6k")
+volume_db = -17.983
+autoplay = true
+parameters/looping = true

@@ -100,6 +100,9 @@ libraries = {
 }
 autoplay = "new_animation"
 
+[node name="Panel04" parent="AnimationPlayer" instance=ExtResource("4_r8u4m")]
+position = Vector2(1022, 148)
+
 [node name="player" parent="." instance=ExtResource("1_wpt44")]
 position = Vector2(-40, 85)
 collision_layer = 3
@@ -126,9 +129,6 @@ position = Vector2(3090, 265)
 [node name="dezodor" parent="." instance=ExtResource("5_8kp40")]
 position = Vector2(4354, -145)
 rotation = -0.785397
-
-[node name="Panel04" parent="." instance=ExtResource("4_r8u4m")]
-position = Vector2(718, 709)
 
 [node name="tuborg3" parent="." instance=ExtResource("8_q8vx4")]
 position = Vector2(2684, -2649)
