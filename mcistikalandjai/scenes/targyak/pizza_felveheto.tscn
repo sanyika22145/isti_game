@@ -1,15 +1,15 @@
 [gd_scene load_steps=5 format=3 uid="uid://cmus63ju7a5wr"]
 
 [ext_resource type="Texture2D" uid="uid://pash4crw7mu2" path="res://assets/targyak/pizza.png" id="1_qm7ci"]
-[ext_resource type="Script" path="res://script/cordon_felveheto.gd" id="2_m6w14"]
+[ext_resource type="Script" path="res://script/felveheto.gd" id="2_m6w14"]
 [ext_resource type="AudioStream" uid="uid://bcxmn32tn7fle" path="res://assets/audio/fefferoni.mp3" id="3_dv6g6"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_1rad6"]
-radius = 1668.23
+radius = 1700.09
 
 [node name="pizzaFelveheto" type="Sprite2D"]
-position = Vector2(-0.999969, 2.86102e-06)
-scale = Vector2(0.0305772, 0.0305772)
+position = Vector2(1, 0)
+scale = Vector2(0.0401909, 0.0401909)
 texture = ExtResource("1_qm7ci")
 script = ExtResource("2_m6w14")
 

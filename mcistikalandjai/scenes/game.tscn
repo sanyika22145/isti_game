@@ -1,6 +1,7 @@
-[gd_scene load_steps=20 format=3 uid="uid://x3408vxotqj"]
+[gd_scene load_steps=21 format=3 uid="uid://x3408vxotqj"]
 
 [ext_resource type="PackedScene" uid="uid://c5ag6q51ckqel" path="res://scenes/player.tscn" id="1_wpt44"]
+[ext_resource type="PackedScene" uid="uid://dm8wfq4noafwr" path="res://scenes/targyak/cigi_felveheto.tscn" id="2_ixso0"]
 [ext_resource type="PackedScene" uid="uid://bfja8yt81uh63" path="res://scenes/platformok/panel.tscn" id="2_qi7us"]
 [ext_resource type="PackedScene" uid="uid://o5ekqncrmsf5" path="res://scenes/killzone.tscn" id="3_2cj8q"]
 [ext_resource type="PackedScene" uid="uid://ntwnos7nb0k1" path="res://scenes/platformok/panel_02.tscn" id="4_r8u4m"]
@@ -102,6 +103,9 @@ autoplay = "new_animation"
 
 [node name="Panel04" parent="AnimationPlayer" instance=ExtResource("4_r8u4m")]
 position = Vector2(1022, 148)
+
+[node name="cordonFelveheto" parent="AnimationPlayer" instance=ExtResource("2_ixso0")]
+position = Vector2(1127, -392)
 
 [node name="player" parent="." instance=ExtResource("1_wpt44")]
 position = Vector2(-40, 85)

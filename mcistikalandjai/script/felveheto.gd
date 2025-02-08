@@ -16,7 +16,7 @@ func _process(delta: float) -> void:
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.is_in_group('player'):
-		GameManager.score += 3
+		GameManager.score += 1
 		pickup.play()
 		visible = false
 		$Area2D.collision_layer = 0

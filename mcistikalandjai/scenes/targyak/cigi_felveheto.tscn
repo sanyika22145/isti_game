@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://dm8wfq4noafwr"]
+
+[ext_resource type="Texture2D" uid="uid://ba2vxcg6fm4um" path="res://assets/targyak/marlboro.png" id="1_ar7oo"]
+[ext_resource type="Script" path="res://script/felveheto.gd" id="2_ikj8d"]
+[ext_resource type="AudioStream" uid="uid://b2tppfdoicr2p" path="res://assets/audio/marboro.mp3" id="3_xct6q"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w2p8x"]
+size = Vector2(259.358, 401.069)
+
+[node name="cordonFelveheto" type="Sprite2D"]
+position = Vector2(14, -20)
+scale = Vector2(0.3975, 0.3975)
+texture = ExtResource("1_ar7oo")
+script = ExtResource("2_ikj8d")
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(278.075, 256.685)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-270.528, -239.074)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_w2p8x")
+
+[node name="pickup" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_xct6q")
+volume_db = 16.505
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
