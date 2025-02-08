@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cl77af56u5dna"
-path="res://.godot/imported/taviranyito.png-13b38da7fe467f36022eeb970e0bd533.ctex"
+uid="uid://nppdmpl28pde"
+path="res://.godot/imported/5.png-85f759b6ede02b711d1923e270a20110.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/taviranyito.png"
-dest_files=["res://.godot/imported/taviranyito.png-13b38da7fe467f36022eeb970e0bd533.ctex"]
+source_file="res://assets/playerAnimation/5.png"
+dest_files=["res://.godot/imported/5.png-85f759b6ede02b711d1923e270a20110.ctex"]
 
 [params]
 

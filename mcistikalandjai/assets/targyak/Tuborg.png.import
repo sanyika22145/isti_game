@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cctqt82n5b78i"
-path="res://.godot/imported/coca-cola.png-18acc185ef15fb9269e0068060796fa1.ctex"
+uid="uid://dkgp0ht7f30cc"
+path="res://.godot/imported/Tuborg.png-8b789d0e8687ff0d3740c7c54c37029c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/coca-cola.png"
-dest_files=["res://.godot/imported/coca-cola.png-18acc185ef15fb9269e0068060796fa1.ctex"]
+source_file="res://assets/targyak/Tuborg.png"
+dest_files=["res://.godot/imported/Tuborg.png-8b789d0e8687ff0d3740c7c54c37029c.ctex"]
 
 [params]
 

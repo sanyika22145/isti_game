@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cbqixx6pxw0g8"
-path="res://.godot/imported/allo_isti.png-c3d762c6ecc4a956ecd4844aed091062.ctex"
+uid="uid://cctqt82n5b78i"
+path="res://.godot/imported/coca-cola.png-c00ddafa20ad86edf28eb24e8cdec626.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/allo_isti.png"
-dest_files=["res://.godot/imported/allo_isti.png-c3d762c6ecc4a956ecd4844aed091062.ctex"]
+source_file="res://assets/targyak/coca-cola.png"
+dest_files=["res://.godot/imported/coca-cola.png-c00ddafa20ad86edf28eb24e8cdec626.ctex"]
 
 [params]
 

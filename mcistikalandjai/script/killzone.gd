@@ -1,9 +1,20 @@
 extends Area2D
-
+var rng = RandomNumberGenerator.new()
 @onready var timer: Timer = $Timer
+@onready var kurvaanyadat: AudioStreamPlayer = $kurvaanyadat
+@onready var kurvaanyadat_2: AudioStreamPlayer = $kurvaanyadat2
 
 func _on_body_entered(body: Node2D) -> void:
+	var randomAudioSzam = rng.randi_range(1,2)
+	print(randomAudioSzam)
+	if randomAudioSzam == 1:
+		kurvaanyadat.play()
+		await kurvaanyadat.finished
+	elif randomAudioSzam == 2:
+		kurvaanyadat_2.play()
+		await kurvaanyadat_2.finished
 	print("You died!")
+	
 	timer.start()
 
 func _on_timer_timeout() -> void:

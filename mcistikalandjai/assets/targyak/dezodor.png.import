@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cweddckde0ln6"
-path="res://.godot/imported/pepsi.png-788b86335bcf1111327db28ee3de4020.ctex"
+uid="uid://cp07b07euj2y1"
+path="res://.godot/imported/dezodor.png-77f934d0db5fbe654e5a3e93f5903d19.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/pepsi.png"
-dest_files=["res://.godot/imported/pepsi.png-788b86335bcf1111327db28ee3de4020.ctex"]
+source_file="res://assets/targyak/dezodor.png"
+dest_files=["res://.godot/imported/dezodor.png-77f934d0db5fbe654e5a3e93f5903d19.ctex"]
 
 [params]
 

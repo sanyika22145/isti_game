@@ -4,12 +4,12 @@
 [ext_resource type="PackedScene" uid="uid://bfja8yt81uh63" path="res://scenes/panel.tscn" id="2_qi7us"]
 [ext_resource type="PackedScene" uid="uid://o5ekqncrmsf5" path="res://scenes/killzone.tscn" id="3_2cj8q"]
 [ext_resource type="PackedScene" uid="uid://ntwnos7nb0k1" path="res://scenes/panel_02.tscn" id="4_r8u4m"]
-[ext_resource type="PackedScene" uid="uid://vxiu6yjgbpew" path="res://scenes/dezodor.tscn" id="5_8kp40"]
-[ext_resource type="PackedScene" uid="uid://d21kx6sibdbkb" path="res://scenes/cocacola.tscn" id="7_1qesu"]
-[ext_resource type="Texture2D" uid="uid://qi1iwrl8ns3m" path="res://assets/cordon.png" id="8_iw1ev"]
-[ext_resource type="PackedScene" uid="uid://drops2dt7lvdt" path="res://scenes/tuborg.tscn" id="8_q8vx4"]
-[ext_resource type="PackedScene" uid="uid://50pnstknpd0y" path="res://scenes/taviranyito.tscn" id="9_1kwer"]
-[ext_resource type="PackedScene" uid="uid://chcm1lcefsvch" path="res://scenes/pepsi.tscn" id="10_qo3sv"]
+[ext_resource type="PackedScene" uid="uid://vxiu6yjgbpew" path="res://scenes/targyak/dezodor.tscn" id="5_8kp40"]
+[ext_resource type="PackedScene" uid="uid://d21kx6sibdbkb" path="res://scenes/targyak/cocacola.tscn" id="7_1qesu"]
+[ext_resource type="Texture2D" uid="uid://qi1iwrl8ns3m" path="res://assets/targyak/cordon.png" id="8_iw1ev"]
+[ext_resource type="PackedScene" uid="uid://drops2dt7lvdt" path="res://scenes/targyak/tuborg.tscn" id="8_q8vx4"]
+[ext_resource type="PackedScene" uid="uid://50pnstknpd0y" path="res://scenes/targyak/taviranyito.tscn" id="9_1kwer"]
+[ext_resource type="PackedScene" uid="uid://chcm1lcefsvch" path="res://scenes/targyak/pepsi.tscn" id="10_qo3sv"]
 
 [sub_resource type="Animation" id="Animation_57kv4"]
 length = 0.001
@@ -160,4 +160,4 @@ position = Vector2(1932, -2275)
 position = Vector2(1613, -1535)
 
 [node name="pepsi" parent="pepsi" instance=ExtResource("10_qo3sv")]
-position = Vector2(-641, -1481)
+position = Vector2(-513, -1400)

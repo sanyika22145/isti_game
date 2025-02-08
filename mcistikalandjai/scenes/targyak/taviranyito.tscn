@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://50pnstknpd0y"]
 
-[ext_resource type="Texture2D" uid="uid://cl77af56u5dna" path="res://assets/taviranyito.png" id="1_qan1l"]
+[ext_resource type="Texture2D" uid="uid://cl77af56u5dna" path="res://assets/targyak/taviranyito.png" id="1_qan1l"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_a80do"]
 size = Vector2(113, 456)

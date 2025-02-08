@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://d21kx6sibdbkb"]
 
-[ext_resource type="Texture2D" uid="uid://cctqt82n5b78i" path="res://assets/coca-cola.png" id="1_m6ysh"]
+[ext_resource type="Texture2D" uid="uid://cctqt82n5b78i" path="res://assets/targyak/coca-cola.png" id="1_m6ysh"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_as7fd"]
 radius = 71.0

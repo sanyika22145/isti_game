@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://wtgdjtq84ifj"
-path="res://.godot/imported/1.png-c9a8e694d0d275633d567702fb508122.ctex"
+uid="uid://qi1iwrl8ns3m"
+path="res://.godot/imported/cordon.png-f3083edd8113c19ae78c1cfb9f9f15eb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/1.png"
-dest_files=["res://.godot/imported/1.png-c9a8e694d0d275633d567702fb508122.ctex"]
+source_file="res://assets/targyak/cordon.png"
+dest_files=["res://.godot/imported/cordon.png-f3083edd8113c19ae78c1cfb9f9f15eb.ctex"]
 
 [params]
 

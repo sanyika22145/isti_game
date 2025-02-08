@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://vxiu6yjgbpew"]
 
-[ext_resource type="Texture2D" uid="uid://cp07b07euj2y1" path="res://assets/dezodor.png" id="1_usppt"]
+[ext_resource type="Texture2D" uid="uid://cp07b07euj2y1" path="res://assets/targyak/dezodor.png" id="1_usppt"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_hetbo"]
 radius = 67.0

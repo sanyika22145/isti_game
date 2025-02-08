@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://drops2dt7lvdt"]
 
-[ext_resource type="Texture2D" uid="uid://dkgp0ht7f30cc" path="res://assets/Tuborg.png" id="1_makre"]
+[ext_resource type="Texture2D" uid="uid://dkgp0ht7f30cc" path="res://assets/targyak/Tuborg.png" id="1_makre"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_obikl"]
 radius = 70.0

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cp07b07euj2y1"
-path="res://.godot/imported/dezodor.png-c3af6e4dfb6f4c9787d177e584a564b0.ctex"
+uid="uid://dj1tfbg6g8pc7"
+path="res://.godot/imported/keszPanel.png-e4eeaf05669923861873ad3c688b8eae.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/dezodor.png"
-dest_files=["res://.godot/imported/dezodor.png-c3af6e4dfb6f4c9787d177e584a564b0.ctex"]
+source_file="res://assets/targyak/keszPanel.png"
+dest_files=["res://.godot/imported/keszPanel.png-e4eeaf05669923861873ad3c688b8eae.ctex"]
 
 [params]
 

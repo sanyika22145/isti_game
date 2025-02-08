@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://bfja8yt81uh63"]
 
-[ext_resource type="Texture2D" uid="uid://dj1tfbg6g8pc7" path="res://assets/keszPanel.png" id="1_732un"]
+[ext_resource type="Texture2D" uid="uid://dj1tfbg6g8pc7" path="res://assets/targyak/keszPanel.png" id="1_732un"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ul72k"]
 size = Vector2(422, 867)

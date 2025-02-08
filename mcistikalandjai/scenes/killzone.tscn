@@ -1,13 +1,23 @@
-[gd_scene load_steps=2 format=3 uid="uid://o5ekqncrmsf5"]
+[gd_scene load_steps=4 format=3 uid="uid://o5ekqncrmsf5"]
 
 [ext_resource type="Script" path="res://script/killzone.gd" id="1_vcu7q"]
+[ext_resource type="AudioStream" uid="uid://cw8livn88vha1" path="res://assets/audio/kurvaanyadat.mp3" id="2_5smo5"]
+[ext_resource type="AudioStream" uid="uid://bipkw4t3yugf5" path="res://assets/audio/kurvaanyadat2.mp3" id="2_ofyvu"]
 
 [node name="Killzone" type="Area2D"]
 collision_mask = 2
 script = ExtResource("1_vcu7q")
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 0.6
+wait_time = 0.3
+
+[node name="kurvaanyadat" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_5smo5")
+volume_db = 1.874
+
+[node name="kurvaanyadat2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_ofyvu")
+volume_db = -11.243
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

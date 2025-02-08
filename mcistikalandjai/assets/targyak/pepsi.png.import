@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dj1tfbg6g8pc7"
-path="res://.godot/imported/keszPanel.png-665992eb86d61a73007eb783621587d2.ctex"
+uid="uid://cweddckde0ln6"
+path="res://.godot/imported/pepsi.png-8d633468c3142220c91ea564f4427aa2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/keszPanel.png"
-dest_files=["res://.godot/imported/keszPanel.png-665992eb86d61a73007eb783621587d2.ctex"]
+source_file="res://assets/targyak/pepsi.png"
+dest_files=["res://.godot/imported/pepsi.png-8d633468c3142220c91ea564f4427aa2.ctex"]
 
 [params]
 
