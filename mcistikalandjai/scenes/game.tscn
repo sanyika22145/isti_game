@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://x3408vxotqj"]
+[gd_scene load_steps=26 format=3 uid="uid://x3408vxotqj"]
 
 [ext_resource type="PackedScene" uid="uid://c5ag6q51ckqel" path="res://scenes/player.tscn" id="1_wpt44"]
 [ext_resource type="PackedScene" uid="uid://dm8wfq4noafwr" path="res://scenes/targyak/cigi_felveheto.tscn" id="2_ixso0"]
@@ -7,7 +7,6 @@
 [ext_resource type="PackedScene" uid="uid://ntwnos7nb0k1" path="res://scenes/platformok/panel_02.tscn" id="4_r8u4m"]
 [ext_resource type="Script" path="res://script/camera_2d.gd" id="4_wep1i"]
 [ext_resource type="PackedScene" uid="uid://vxiu6yjgbpew" path="res://scenes/platformok/dezodor.tscn" id="5_8kp40"]
-[ext_resource type="Texture2D" uid="uid://br1bwu5pqlwe7" path="res://assets/targyak/miskolcblur.png" id="5_sestb"]
 [ext_resource type="PackedScene" uid="uid://d21kx6sibdbkb" path="res://scenes/platformok/cocacola.tscn" id="7_1qesu"]
 [ext_resource type="PackedScene" uid="uid://drops2dt7lvdt" path="res://scenes/platformok/tuborg.tscn" id="8_q8vx4"]
 [ext_resource type="PackedScene" uid="uid://50pnstknpd0y" path="res://scenes/platformok/taviranyito.tscn" id="9_1kwer"]
@@ -57,22 +56,6 @@ _data = {
 "RESET": SubResource("Animation_57kv4"),
 "new_animation": SubResource("Animation_lttb0")
 }
-
-[sub_resource type="GDScript" id="GDScript_qqg8c"]
-script/source = "extends Sprite2D
-
-var y_offset = -300  # Adjust as needed for the sprite's vertical positioning
-var camera: Camera2D
-
-func _ready():
-	camera = get_parent()  # Get the Camera2D, assuming it's the parent of this sprite
-
-func _process(delta):
-	if camera:
-		# Set the sprite's position to the bottom of the camera
-		position.x = camera.position.x  # Keep the X position to follow the camera
-		position.y = camera.position.y + (get_viewport().size.y / 2) + y_offset
-"
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_c0lem"]
 
@@ -138,15 +121,8 @@ zoom = Vector2(0.5, 0.5)
 limit_bottom = 450
 script = ExtResource("4_wep1i")
 
-[node name="Miskolcblur" type="Sprite2D" parent="player/Camera2D"]
-z_index = -20
-position = Vector2(40, -95)
-scale = Vector2(1.89275, 1.89275)
-texture = ExtResource("5_sestb")
-script = SubResource("GDScript_qqg8c")
-
 [node name="Panel" parent="." instance=ExtResource("2_qi7us")]
-position = Vector2(-192, 499)
+position = Vector2(-154, 489)
 
 [node name="Killzone" parent="." instance=ExtResource("3_2cj8q")]
 position = Vector2(-231, 1212)
