@@ -140,7 +140,7 @@ script = ExtResource("4_wep1i")
 
 [node name="Miskolcblur" type="Sprite2D" parent="player/Camera2D"]
 z_index = -20
-position = Vector2(-23, -77)
+position = Vector2(40, -95)
 scale = Vector2(1.89275, 1.89275)
 texture = ExtResource("5_sestb")
 script = SubResource("GDScript_qqg8c")
