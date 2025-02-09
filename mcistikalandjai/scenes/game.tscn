@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://x3408vxotqj"]
+[gd_scene load_steps=22 format=3 uid="uid://x3408vxotqj"]
 
 [ext_resource type="PackedScene" uid="uid://c5ag6q51ckqel" path="res://scenes/player.tscn" id="1_wpt44"]
 [ext_resource type="PackedScene" uid="uid://dm8wfq4noafwr" path="res://scenes/targyak/cigi_felveheto.tscn" id="2_ixso0"]
@@ -8,6 +8,7 @@
 [ext_resource type="Script" path="res://script/camera_2d.gd" id="4_wep1i"]
 [ext_resource type="PackedScene" uid="uid://ci372cvpo8tn8" path="res://scenes/targyak/cordon_felveheto.tscn" id="11_dsdnw"]
 [ext_resource type="PackedScene" uid="uid://cmus63ju7a5wr" path="res://scenes/targyak/pizza_felveheto.tscn" id="12_fioov"]
+[ext_resource type="Texture2D" uid="uid://pash4crw7mu2" path="res://assets/targyak/pizza.png" id="13_x5vxx"]
 [ext_resource type="PackedScene" uid="uid://bwo0nhicc0r3n" path="res://scenes/targyak/tuborg_felveheto.tscn" id="14_fh723"]
 [ext_resource type="PackedScene" uid="uid://du4pawiyj3xc0" path="res://scenes/targyak/erospista_felveheto.tscn" id="15_lw2bx"]
 [ext_resource type="PackedScene" uid="uid://d3y6c1jmsjq8t" path="res://scenes/targyak/mirelit_felveheto.tscn" id="16_xlla4"]
@@ -66,6 +67,10 @@ _data = {
 "Coca": SubResource("Animation_y6ict"),
 "RESET": SubResource("Animation_c2n1x")
 }
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_gocwx"]
+radius = 256.394
+height = 512.787
 
 [node name="Game" type="Node2D"]
 position = Vector2(304, -561)
@@ -137,10 +142,10 @@ scale = Vector2(4, 4)
 motion_mirroring = Vector2(1000, 0)
 
 [node name="ColorRect" type="ColorRect" parent="CanvasLayer/ParallaxBackground/ParallaxLayer"]
-offset_left = -3344.0
-offset_top = -1062.0
-offset_right = -966.0
-offset_bottom = 424.0
+offset_left = -1539.75
+offset_top = -1001.5
+offset_right = 838.25
+offset_bottom = 484.5
 color = Color(0.262692, 0.542377, 0.948782, 1)
 metadata/_edit_use_anchors_ = true
 metadata/_edit_lock_ = true
@@ -148,7 +153,7 @@ metadata/_edit_lock_ = true
 [node name="ParallaxBackground2" type="ParallaxBackground" parent="CanvasLayer"]
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="CanvasLayer/ParallaxBackground2"]
-motion_mirroring = Vector2(888.88, 0)
+motion_mirroring = Vector2(888.88, 1)
 
 [node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/ParallaxBackground2/ParallaxLayer"]
 self_modulate = Color(0.633757, 0.633757, 0.633757, 1)
@@ -201,3 +206,11 @@ show_behind_parent = true
 position = Vector2(5159.37, 69.6875)
 scale = Vector2(0.643825, 0.732216)
 texture = ExtResource("18_cj32a")
+
+[node name="Pizza" type="Sprite2D" parent="."]
+position = Vector2(4038, 293)
+scale = Vector2(1.32609, 0.377193)
+texture = ExtResource("13_x5vxx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pizza"]
+shape = SubResource("CapsuleShape2D_gocwx")
