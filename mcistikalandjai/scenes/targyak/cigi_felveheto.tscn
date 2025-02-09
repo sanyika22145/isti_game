@@ -18,7 +18,6 @@ position = Vector2(278.075, 256.685)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(-270.528, -239.074)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_w2p8x")
 
 [node name="pickup" type="AudioStreamPlayer" parent="."]
