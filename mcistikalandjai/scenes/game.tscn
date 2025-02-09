@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://x3408vxotqj"]
+[gd_scene load_steps=20 format=3 uid="uid://x3408vxotqj"]
 
 [ext_resource type="PackedScene" uid="uid://c5ag6q51ckqel" path="res://scenes/player.tscn" id="1_wpt44"]
 [ext_resource type="PackedScene" uid="uid://dm8wfq4noafwr" path="res://scenes/targyak/cigi_felveheto.tscn" id="2_ixso0"]
@@ -6,18 +6,11 @@
 [ext_resource type="PackedScene" uid="uid://o5ekqncrmsf5" path="res://scenes/killzone.tscn" id="3_2cj8q"]
 [ext_resource type="PackedScene" uid="uid://ntwnos7nb0k1" path="res://scenes/platformok/panel_02.tscn" id="4_r8u4m"]
 [ext_resource type="Script" path="res://script/camera_2d.gd" id="4_wep1i"]
-[ext_resource type="Texture2D" uid="uid://dehjnol8lrl3p" path="res://assets/targyak/hatter.jpg" id="5_6fex7"]
-[ext_resource type="PackedScene" uid="uid://vxiu6yjgbpew" path="res://scenes/platformok/dezodor.tscn" id="5_8kp40"]
-[ext_resource type="PackedScene" uid="uid://d21kx6sibdbkb" path="res://scenes/platformok/cocacola.tscn" id="7_1qesu"]
-[ext_resource type="PackedScene" uid="uid://drops2dt7lvdt" path="res://scenes/platformok/tuborg.tscn" id="8_q8vx4"]
-[ext_resource type="PackedScene" uid="uid://50pnstknpd0y" path="res://scenes/platformok/taviranyito.tscn" id="9_1kwer"]
-[ext_resource type="PackedScene" uid="uid://chcm1lcefsvch" path="res://scenes/platformok/pepsi.tscn" id="10_qo3sv"]
 [ext_resource type="PackedScene" uid="uid://ci372cvpo8tn8" path="res://scenes/targyak/cordon_felveheto.tscn" id="11_dsdnw"]
 [ext_resource type="PackedScene" uid="uid://cmus63ju7a5wr" path="res://scenes/targyak/pizza_felveheto.tscn" id="12_fioov"]
 [ext_resource type="PackedScene" uid="uid://bwo0nhicc0r3n" path="res://scenes/targyak/tuborg_felveheto.tscn" id="14_fh723"]
 [ext_resource type="PackedScene" uid="uid://du4pawiyj3xc0" path="res://scenes/targyak/erospista_felveheto.tscn" id="15_lw2bx"]
 [ext_resource type="PackedScene" uid="uid://d3y6c1jmsjq8t" path="res://scenes/targyak/mirelit_felveheto.tscn" id="16_xlla4"]
-[ext_resource type="Texture2D" uid="uid://dg6getqfglgae" path="res://assets/targyak/mirelit.png" id="17_a6102"]
 [ext_resource type="Texture2D" uid="uid://dj1tfbg6g8pc7" path="res://assets/targyak/keszPanel.png" id="18_cj32a"]
 
 [sub_resource type="Animation" id="Animation_57kv4"]
@@ -64,33 +57,9 @@ _data = {
 resource_name = "Coca"
 length = 4.0
 loop_mode = 2
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("AnimationPlayer2/cocacola:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 4),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(4565, -1490), Vector2(2899, -1885)]
-}
 
 [sub_resource type="Animation" id="Animation_c2n1x"]
 length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("AnimationPlayer2/cocacola:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(4565, -1490)]
-}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_6sce3"]
 _data = {
@@ -122,12 +91,6 @@ zoom = Vector2(0.5, 0.5)
 limit_bottom = 400
 script = ExtResource("4_wep1i")
 
-[node name="Miskolcblur" type="Sprite2D" parent="player"]
-z_index = -20
-position = Vector2(2443.5, -3185.5)
-scale = Vector2(153.951, 77.5759)
-texture = ExtResource("5_6fex7")
-
 [node name="Panel" parent="." instance=ExtResource("2_qi7us")]
 position = Vector2(-154, 489)
 
@@ -143,38 +106,11 @@ position = Vector2(1750, 285)
 [node name="Panel03" parent="." instance=ExtResource("4_r8u4m")]
 position = Vector2(2984, 438)
 
-[node name="dezodor" parent="." instance=ExtResource("5_8kp40")]
-position = Vector2(4354, -145)
-rotation = -0.785397
-
-[node name="tuborg3" parent="." instance=ExtResource("8_q8vx4")]
-position = Vector2(2684, -2649)
-rotation = 3.14159
-
-[node name="tuborg2" parent="." instance=ExtResource("8_q8vx4")]
-position = Vector2(2341, -1531)
-
-[node name="tuborg" parent="." instance=ExtResource("8_q8vx4")]
-position = Vector2(2991, -1353)
-
 [node name="AnimationPlayer2" type="AnimationPlayer" parent="."]
 libraries = {
 "": SubResource("AnimationLibrary_6sce3")
 }
 autoplay = "Coca"
-
-[node name="cocacola" parent="AnimationPlayer2" instance=ExtResource("7_1qesu")]
-position = Vector2(4565, -1490)
-rotation = -1.0472
-
-[node name="taviranyito" parent="." instance=ExtResource("9_1kwer")]
-position = Vector2(1932, -2275)
-
-[node name="pepsi2" parent="." instance=ExtResource("10_qo3sv")]
-position = Vector2(1131, -2641)
-
-[node name="pepsi" parent="." instance=ExtResource("10_qo3sv")]
-position = Vector2(1501, -1509)
 
 [node name="pizzaFelveheto" parent="." instance=ExtResource("12_fioov")]
 position = Vector2(1987, -371)
@@ -192,25 +128,76 @@ position = Vector2(847, -132)
 [node name="cordonFelveheto" parent="." instance=ExtResource("11_dsdnw")]
 position = Vector2(4217, -506)
 
-[node name="Mirelit" type="Sprite2D" parent="."]
-position = Vector2(5311, -568)
-rotation = 0.853954
-texture = ExtResource("17_a6102")
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="KeszPanel" type="Sprite2D" parent="."]
-modulate = Color(0.433937, 0.441493, 0.435758, 1)
-z_index = -5
-position = Vector2(284, 773)
+[node name="ParallaxBackground" type="ParallaxBackground" parent="CanvasLayer"]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="CanvasLayer/ParallaxBackground"]
+scale = Vector2(4, 4)
+motion_mirroring = Vector2(1000, 0)
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/ParallaxBackground/ParallaxLayer"]
+offset_left = -3344.0
+offset_top = -1062.0
+offset_right = -966.0
+offset_bottom = 424.0
+color = Color(0.262692, 0.542377, 0.948782, 1)
+metadata/_edit_use_anchors_ = true
+metadata/_edit_lock_ = true
+
+[node name="ParallaxBackground2" type="ParallaxBackground" parent="CanvasLayer"]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="CanvasLayer/ParallaxBackground2"]
+motion_mirroring = Vector2(888.88, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/ParallaxBackground2/ParallaxLayer"]
+self_modulate = Color(0.633757, 0.633757, 0.633757, 1)
+position = Vector2(-632, 152)
+scale = Vector2(0.514056, 0.589752)
 texture = ExtResource("18_cj32a")
 
-[node name="KeszPanel3" type="Sprite2D" parent="."]
-modulate = Color(0.433937, 0.441493, 0.435758, 1)
-z_index = -5
-position = Vector2(1542, 709)
+[node name="Sprite2D2" type="Sprite2D" parent="CanvasLayer/ParallaxBackground2/ParallaxLayer"]
+self_modulate = Color(0.29219, 0.29219, 0.29219, 1)
+show_behind_parent = true
+position = Vector2(-192.625, 80)
+scale = Vector2(0.643825, 0.732216)
 texture = ExtResource("18_cj32a")
 
-[node name="KeszPanel2" type="Sprite2D" parent="."]
-modulate = Color(0.433937, 0.441493, 0.435758, 1)
-z_index = -5
-position = Vector2(2567, 698)
+[node name="Sprite2D3" type="Sprite2D" parent="CanvasLayer/ParallaxBackground2/ParallaxLayer"]
+self_modulate = Color(0.633757, 0.633757, 0.633757, 1)
+position = Vector2(1152, 149.688)
+scale = Vector2(0.514056, 0.589752)
+texture = ExtResource("18_cj32a")
+
+[node name="Sprite2D4" type="Sprite2D" parent="CanvasLayer/ParallaxBackground2/ParallaxLayer"]
+self_modulate = Color(0.29219, 0.29219, 0.29219, 1)
+show_behind_parent = true
+position = Vector2(1591.37, 77.6875)
+scale = Vector2(0.643825, 0.732216)
+texture = ExtResource("18_cj32a")
+
+[node name="Sprite2D5" type="Sprite2D" parent="CanvasLayer/ParallaxBackground2/ParallaxLayer"]
+self_modulate = Color(0.633757, 0.633757, 0.633757, 1)
+position = Vector2(2936, 144)
+scale = Vector2(0.514056, 0.589752)
+texture = ExtResource("18_cj32a")
+
+[node name="Sprite2D6" type="Sprite2D" parent="CanvasLayer/ParallaxBackground2/ParallaxLayer"]
+self_modulate = Color(0.29219, 0.29219, 0.29219, 1)
+show_behind_parent = true
+position = Vector2(3375.37, 72)
+scale = Vector2(0.643825, 0.732216)
+texture = ExtResource("18_cj32a")
+
+[node name="Sprite2D7" type="Sprite2D" parent="CanvasLayer/ParallaxBackground2/ParallaxLayer"]
+self_modulate = Color(0.633757, 0.633757, 0.633757, 1)
+position = Vector2(4720, 141.688)
+scale = Vector2(0.514056, 0.589752)
+texture = ExtResource("18_cj32a")
+
+[node name="Sprite2D8" type="Sprite2D" parent="CanvasLayer/ParallaxBackground2/ParallaxLayer"]
+self_modulate = Color(0.29219, 0.29219, 0.29219, 1)
+show_behind_parent = true
+position = Vector2(5159.37, 69.6875)
+scale = Vector2(0.643825, 0.732216)
 texture = ExtResource("18_cj32a")
