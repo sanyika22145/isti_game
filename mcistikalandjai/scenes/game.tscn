@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://x3408vxotqj"]
+[gd_scene load_steps=21 format=3 uid="uid://x3408vxotqj"]
 
 [ext_resource type="PackedScene" uid="uid://c5ag6q51ckqel" path="res://scenes/player.tscn" id="1_wpt44"]
 [ext_resource type="PackedScene" uid="uid://dm8wfq4noafwr" path="res://scenes/targyak/cigi_felveheto.tscn" id="2_ixso0"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://o5ekqncrmsf5" path="res://scenes/killzone.tscn" id="3_2cj8q"]
 [ext_resource type="PackedScene" uid="uid://ntwnos7nb0k1" path="res://scenes/platformok/panel_02.tscn" id="4_r8u4m"]
 [ext_resource type="Script" path="res://script/camera_2d.gd" id="4_wep1i"]
+[ext_resource type="Texture2D" uid="uid://br1bwu5pqlwe7" path="res://assets/targyak/miskolcblur.png" id="5_sestb"]
 [ext_resource type="PackedScene" uid="uid://ci372cvpo8tn8" path="res://scenes/targyak/cordon_felveheto.tscn" id="11_dsdnw"]
 [ext_resource type="PackedScene" uid="uid://cmus63ju7a5wr" path="res://scenes/targyak/pizza_felveheto.tscn" id="12_fioov"]
 [ext_resource type="PackedScene" uid="uid://bwo0nhicc0r3n" path="res://scenes/targyak/tuborg_felveheto.tscn" id="14_fh723"]
@@ -90,6 +91,12 @@ collision_layer = 3
 zoom = Vector2(0.5, 0.5)
 limit_bottom = 400
 script = ExtResource("4_wep1i")
+
+[node name="Miskolcblur" type="Sprite2D" parent="player/Camera2D"]
+z_index = -30
+position = Vector2(7, -26)
+scale = Vector2(1.84473, 1.84473)
+texture = ExtResource("5_sestb")
 
 [node name="Panel" parent="." instance=ExtResource("2_qi7us")]
 position = Vector2(-154, 497)
