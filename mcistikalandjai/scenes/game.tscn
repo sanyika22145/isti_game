@@ -6,8 +6,8 @@
 [ext_resource type="PackedScene" uid="uid://o5ekqncrmsf5" path="res://scenes/killzone.tscn" id="3_2cj8q"]
 [ext_resource type="PackedScene" uid="uid://ntwnos7nb0k1" path="res://scenes/platformok/panel_02.tscn" id="4_r8u4m"]
 [ext_resource type="Script" path="res://script/camera_2d.gd" id="4_wep1i"]
+[ext_resource type="Texture2D" uid="uid://dehjnol8lrl3p" path="res://assets/targyak/hatter.jpg" id="5_6fex7"]
 [ext_resource type="PackedScene" uid="uid://vxiu6yjgbpew" path="res://scenes/platformok/dezodor.tscn" id="5_8kp40"]
-[ext_resource type="Texture2D" uid="uid://br1bwu5pqlwe7" path="res://assets/targyak/miskolcblur.png" id="5_sestb"]
 [ext_resource type="PackedScene" uid="uid://d21kx6sibdbkb" path="res://scenes/platformok/cocacola.tscn" id="7_1qesu"]
 [ext_resource type="PackedScene" uid="uid://drops2dt7lvdt" path="res://scenes/platformok/tuborg.tscn" id="8_q8vx4"]
 [ext_resource type="PackedScene" uid="uid://50pnstknpd0y" path="res://scenes/platformok/taviranyito.tscn" id="9_1kwer"]
@@ -119,13 +119,14 @@ collision_layer = 3
 
 [node name="Camera2D" type="Camera2D" parent="player" groups=["camera"]]
 zoom = Vector2(0.5, 0.5)
+limit_bottom = 400
 script = ExtResource("4_wep1i")
 
-[node name="Miskolcblur" type="Sprite2D" parent="player/Camera2D"]
+[node name="Miskolcblur" type="Sprite2D" parent="player"]
 z_index = -20
-position = Vector2(8, 49.9999)
-scale = Vector2(1.83295, 1.83295)
-texture = ExtResource("5_sestb")
+position = Vector2(2443.5, -3185.5)
+scale = Vector2(153.951, 77.5759)
+texture = ExtResource("5_6fex7")
 
 [node name="Panel" parent="." instance=ExtResource("2_qi7us")]
 position = Vector2(-154, 489)
