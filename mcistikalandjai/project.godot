@@ -18,10 +18,6 @@ config/features=PackedStringArray("4.3", "Forward Plus")
 
 GameManager="*res://scenes/game_manager.tscn"
 
-[display]
-
-window/stretch/scale=1.12
-
 [dotnet]
 
 project/assembly_name="McIstiKalandjai"
