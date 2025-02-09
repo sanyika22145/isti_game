@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://x3408vxotqj"]
+[gd_scene load_steps=27 format=3 uid="uid://x3408vxotqj"]
 
 [ext_resource type="PackedScene" uid="uid://c5ag6q51ckqel" path="res://scenes/player.tscn" id="1_wpt44"]
 [ext_resource type="PackedScene" uid="uid://dm8wfq4noafwr" path="res://scenes/targyak/cigi_felveheto.tscn" id="2_ixso0"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://o5ekqncrmsf5" path="res://scenes/killzone.tscn" id="3_2cj8q"]
 [ext_resource type="PackedScene" uid="uid://ntwnos7nb0k1" path="res://scenes/platformok/panel_02.tscn" id="4_r8u4m"]
 [ext_resource type="Script" path="res://script/camera_2d.gd" id="4_wep1i"]
+[ext_resource type="Texture2D" uid="uid://dehjnol8lrl3p" path="res://assets/targyak/hatter.jpg" id="5_6fex7"]
 [ext_resource type="PackedScene" uid="uid://vxiu6yjgbpew" path="res://scenes/platformok/dezodor.tscn" id="5_8kp40"]
 [ext_resource type="PackedScene" uid="uid://d21kx6sibdbkb" path="res://scenes/platformok/cocacola.tscn" id="7_1qesu"]
 [ext_resource type="PackedScene" uid="uid://drops2dt7lvdt" path="res://scenes/platformok/tuborg.tscn" id="8_q8vx4"]
@@ -121,40 +122,11 @@ zoom = Vector2(0.5, 0.5)
 limit_bottom = 400
 script = ExtResource("4_wep1i")
 
-[node name="CanvasLayer" type="CanvasLayer" parent="player/Camera2D"]
-
-[node name="ParallaxBackground" type="ParallaxBackground" parent="player/Camera2D/CanvasLayer"]
-
-[node name="ParallaxLayer" type="ParallaxLayer" parent="player/Camera2D/CanvasLayer/ParallaxBackground"]
-motion_mirroring = Vector2(1000, 0)
-
-[node name="ColorRect" type="ColorRect" parent="player/Camera2D/CanvasLayer/ParallaxBackground/ParallaxLayer"]
-z_index = -3
-offset_left = -3972.0
-offset_top = -5039.0
-offset_right = 7062.0
-offset_bottom = 3201.0
-color = Color(0.392157, 0.658824, 0.882353, 1)
-
-[node name="ParallaxBackground2" type="ParallaxBackground" parent="player/Camera2D/CanvasLayer"]
-
-[node name="ParallaxLayer" type="ParallaxLayer" parent="player/Camera2D/CanvasLayer/ParallaxBackground2"]
-motion_mirroring = Vector2(996, 0)
-
-[node name="Sprite2D" type="Sprite2D" parent="player/Camera2D/CanvasLayer/ParallaxBackground2/ParallaxLayer"]
-self_modulate = Color(0.481789, 0.481789, 0.481789, 1)
-position = Vector2(-396, 229)
-texture = ExtResource("18_cj32a")
-
-[node name="Sprite2D2" type="Sprite2D" parent="player/Camera2D/CanvasLayer/ParallaxBackground2/ParallaxLayer"]
-self_modulate = Color(0.481789, 0.481789, 0.481789, 1)
-position = Vector2(1591, 229)
-texture = ExtResource("18_cj32a")
-
-[node name="Sprite2D3" type="Sprite2D" parent="player/Camera2D/CanvasLayer/ParallaxBackground2/ParallaxLayer"]
-self_modulate = Color(0.481789, 0.481789, 0.481789, 1)
-position = Vector2(3584, 228.5)
-texture = ExtResource("18_cj32a")
+[node name="Miskolcblur" type="Sprite2D" parent="player"]
+z_index = -20
+position = Vector2(2443.5, -3185.5)
+scale = Vector2(153.951, 77.5759)
+texture = ExtResource("5_6fex7")
 
 [node name="Panel" parent="." instance=ExtResource("2_qi7us")]
 position = Vector2(-154, 489)
@@ -169,7 +141,7 @@ shape = SubResource("WorldBoundaryShape2D_c0lem")
 position = Vector2(1750, 285)
 
 [node name="Panel03" parent="." instance=ExtResource("4_r8u4m")]
-position = Vector2(2981, 384)
+position = Vector2(2984, 438)
 
 [node name="dezodor" parent="." instance=ExtResource("5_8kp40")]
 position = Vector2(4354, -145)
@@ -205,7 +177,7 @@ position = Vector2(1100, -2935)
 position = Vector2(1501, -1509)
 
 [node name="pizzaFelveheto" parent="." instance=ExtResource("12_fioov")]
-position = Vector2(1969, -302)
+position = Vector2(1987, -371)
 scale = Vector2(0.342823, 0.358692)
 
 [node name="pizzaFelveheto2" parent="." instance=ExtResource("14_fh723")]
@@ -224,3 +196,21 @@ position = Vector2(4217, -506)
 position = Vector2(5311, -568)
 rotation = 0.853954
 texture = ExtResource("17_a6102")
+
+[node name="KeszPanel" type="Sprite2D" parent="."]
+modulate = Color(0.433937, 0.441493, 0.435758, 1)
+z_index = -5
+position = Vector2(284, 773)
+texture = ExtResource("18_cj32a")
+
+[node name="KeszPanel3" type="Sprite2D" parent="."]
+modulate = Color(0.433937, 0.441493, 0.435758, 1)
+z_index = -5
+position = Vector2(1542, 709)
+texture = ExtResource("18_cj32a")
+
+[node name="KeszPanel2" type="Sprite2D" parent="."]
+modulate = Color(0.433937, 0.441493, 0.435758, 1)
+z_index = -5
+position = Vector2(2567, 698)
+texture = ExtResource("18_cj32a")
