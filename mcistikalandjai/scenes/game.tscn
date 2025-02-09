@@ -168,3 +168,11 @@ texture = ExtResource("18_cj32a")
 
 [node name="Panel01" parent="." instance=ExtResource("2_qi7us")]
 position = Vector2(5126, 549)
+
+[node name="ColorRect" type="ColorRect" parent="."]
+z_index = -31
+offset_left = -13295.0
+offset_top = -9184.0
+offset_right = 21134.0
+offset_bottom = 8206.0
+color = Color(0.75, 0, 0, 1)
