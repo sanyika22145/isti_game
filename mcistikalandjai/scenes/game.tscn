@@ -199,7 +199,7 @@ rotation = -1.0472
 position = Vector2(1932, -2275)
 
 [node name="pepsi2" parent="." instance=ExtResource("10_qo3sv")]
-position = Vector2(1100, -2935)
+position = Vector2(1131, -2641)
 
 [node name="pepsi" parent="." instance=ExtResource("10_qo3sv")]
 position = Vector2(1501, -1509)
