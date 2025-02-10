@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://x3408vxotqj"]
+[gd_scene load_steps=52 format=3 uid="uid://x3408vxotqj"]
 
 [ext_resource type="PackedScene" uid="uid://c5ag6q51ckqel" path="res://scenes/player.tscn" id="1_wpt44"]
 [ext_resource type="PackedScene" uid="uid://dm8wfq4noafwr" path="res://scenes/targyak/cigi_felveheto.tscn" id="2_ixso0"]
@@ -7,12 +7,24 @@
 [ext_resource type="PackedScene" uid="uid://ntwnos7nb0k1" path="res://scenes/platformok/panel_02.tscn" id="4_r8u4m"]
 [ext_resource type="Script" path="res://script/camera_2d.gd" id="4_wep1i"]
 [ext_resource type="Texture2D" uid="uid://br1bwu5pqlwe7" path="res://assets/targyak/miskolcblur.png" id="5_sestb"]
+[ext_resource type="Script" path="res://scenes/miskolcblur.gd" id="6_rf20j"]
 [ext_resource type="PackedScene" uid="uid://ci372cvpo8tn8" path="res://scenes/targyak/cordon_felveheto.tscn" id="11_dsdnw"]
 [ext_resource type="PackedScene" uid="uid://cmus63ju7a5wr" path="res://scenes/targyak/pizza_felveheto.tscn" id="12_fioov"]
 [ext_resource type="PackedScene" uid="uid://bwo0nhicc0r3n" path="res://scenes/targyak/tuborg_felveheto.tscn" id="14_fh723"]
+[ext_resource type="PackedScene" uid="uid://cb8tr8d0moawe" path="res://scenes/platformok/szint.tscn" id="14_md7kd"]
 [ext_resource type="PackedScene" uid="uid://du4pawiyj3xc0" path="res://scenes/targyak/erospista_felveheto.tscn" id="15_lw2bx"]
+[ext_resource type="PackedScene" uid="uid://d21kx6sibdbkb" path="res://scenes/platformok/cocacola.tscn" id="16_bgosg"]
 [ext_resource type="PackedScene" uid="uid://d3y6c1jmsjq8t" path="res://scenes/targyak/mirelit_felveheto.tscn" id="16_xlla4"]
+[ext_resource type="PackedScene" uid="uid://vxiu6yjgbpew" path="res://scenes/platformok/dezodor.tscn" id="17_3b377"]
 [ext_resource type="Texture2D" uid="uid://dj1tfbg6g8pc7" path="res://assets/targyak/keszPanel.png" id="18_cj32a"]
+[ext_resource type="PackedScene" uid="uid://dtl1y84og8omh" path="res://scenes/platformok/hutogep.tscn" id="18_if6ye"]
+[ext_resource type="PackedScene" uid="uid://qbwf0in1vs8v" path="res://scenes/targyak/hutotroll.tscn" id="19_ebnxx"]
+[ext_resource type="PackedScene" uid="uid://chcm1lcefsvch" path="res://scenes/platformok/pepsi.tscn" id="20_k73cj"]
+[ext_resource type="PackedScene" uid="uid://drops2dt7lvdt" path="res://scenes/platformok/tuborg.tscn" id="21_mi0wp"]
+[ext_resource type="Texture2D" uid="uid://dkgp0ht7f30cc" path="res://assets/targyak/Tuborg.png" id="22_ati1a"]
+[ext_resource type="PackedScene" uid="uid://dlv2oqipt3vh2" path="res://scenes/platformok/cordon.tscn" id="23_8uny0"]
+[ext_resource type="PackedScene" uid="uid://50pnstknpd0y" path="res://scenes/platformok/taviranyito.tscn" id="24_yqv16"]
+[ext_resource type="PackedScene" uid="uid://dbrukfqgec5gl" path="res://scenes/platformok/pizza.tscn" id="25_8aeg5"]
 
 [sub_resource type="Animation" id="Animation_57kv4"]
 length = 0.001
@@ -53,6 +65,7 @@ _data = {
 }
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_c0lem"]
+distance = 32.0
 
 [sub_resource type="Animation" id="Animation_y6ict"]
 resource_name = "Coca"
@@ -66,6 +79,236 @@ length = 0.001
 _data = {
 "Coca": SubResource("Animation_y6ict"),
 "RESET": SubResource("Animation_c2n1x")
+}
+
+[sub_resource type="Animation" id="Animation_osua8"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimationPlayer3/dezodor:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(5216, -608)]
+}
+
+[sub_resource type="Animation" id="Animation_wdfpr"]
+resource_name = "new_animation"
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimationPlayer3/dezodor:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(5216, -608), Vector2(6920, -608)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_euj3t"]
+_data = {
+"RESET": SubResource("Animation_osua8"),
+"new_animation": SubResource("Animation_wdfpr")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hnsq8"]
+size = Vector2(1430.5, 17.6971)
+
+[sub_resource type="Animation" id="Animation_bdw1k"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimationPlayer4/pepsi3:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(10752, -344)]
+}
+
+[sub_resource type="Animation" id="Animation_v85r5"]
+resource_name = "pepsicsal"
+length = 1.5
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimationPlayer4/pepsi3:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.7, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(10752, -344), Vector2(11040, -344), Vector2(13096, -344), Vector2(12848, -344)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_euusg"]
+_data = {
+"RESET": SubResource("Animation_bdw1k"),
+"pepsicsal": SubResource("Animation_v85r5")
+}
+
+[sub_resource type="Animation" id="Animation_8cvui"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimationPlayer5/cocacola3:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(15056, -1056)]
+}
+
+[sub_resource type="Animation" id="Animation_1x3d8"]
+resource_name = "pizza1"
+length = 3.0
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimationPlayer5/cocacola3:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 2.5, 3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(15056, -1056), Vector2(15056, -1056), Vector2(15040, -48), Vector2(15040, -48)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_nvfbi"]
+_data = {
+"RESET": SubResource("Animation_8cvui"),
+"pizza1": SubResource("Animation_1x3d8")
+}
+
+[sub_resource type="Animation" id="Animation_16xvj"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimationPlayer6/cocacola4:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(15800, -64)]
+}
+
+[sub_resource type="Animation" id="Animation_fq16f"]
+resource_name = "pizza2"
+length = 3.0
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimationPlayer6/cocacola4:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 2.5, 3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(15800, -64), Vector2(15800, -64), Vector2(15800, -1024), Vector2(15800, -1024)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_3hmak"]
+_data = {
+"RESET": SubResource("Animation_16xvj"),
+"pizza2": SubResource("Animation_fq16f")
+}
+
+[sub_resource type="Animation" id="Animation_dc6on"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimationPlayer7/cocacola5:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(16520, -1056)]
+}
+
+[sub_resource type="Animation" id="Animation_hxmo1"]
+resource_name = "new_animation"
+length = 3.0
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimationPlayer7/cocacola5:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 2.5, 3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(16520, -1056), Vector2(16520, -1056), Vector2(16520, -88), Vector2(16520, -88)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_xgryu"]
+_data = {
+"RESET": SubResource("Animation_dc6on"),
+"new_animation": SubResource("Animation_hxmo1")
+}
+
+[sub_resource type="Animation" id="Animation_bqpo7"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimationPlayer8/cocacola6:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(17272, -48)]
+}
+
+[sub_resource type="Animation" id="Animation_uj3dd"]
+resource_name = "new_animation"
+length = 3.0
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimationPlayer8/cocacola6:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 2.5, 3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(17272, -48), Vector2(17272, -48), Vector2(17272, -1056), Vector2(17272, -1056)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_jkxh2"]
+_data = {
+"RESET": SubResource("Animation_bqpo7"),
+"new_animation": SubResource("Animation_uj3dd")
 }
 
 [node name="Game" type="Node2D"]
@@ -94,9 +337,10 @@ script = ExtResource("4_wep1i")
 
 [node name="Miskolcblur" type="Sprite2D" parent="player/Camera2D"]
 z_index = -30
-position = Vector2(7, -26)
-scale = Vector2(1.84473, 1.84473)
+position = Vector2(7, -204.344)
+scale = Vector2(1.84473, 2.25997)
 texture = ExtResource("5_sestb")
+script = ExtResource("6_rf20j")
 
 [node name="Panel" parent="." instance=ExtResource("2_qi7us")]
 position = Vector2(-154, 497)
@@ -105,6 +349,7 @@ position = Vector2(-154, 497)
 position = Vector2(-231, 1212)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone"]
+position = Vector2(-70, -317)
 shape = SubResource("WorldBoundaryShape2D_c0lem")
 
 [node name="Panel02" parent="." instance=ExtResource("4_r8u4m")]
@@ -124,7 +369,7 @@ position = Vector2(1987, -371)
 scale = Vector2(0.342823, 0.358692)
 
 [node name="pizzaFelveheto2" parent="." instance=ExtResource("14_fh723")]
-position = Vector2(5046, -1086)
+position = Vector2(6456, -263)
 
 [node name="cordonFelveheto3" parent="." instance=ExtResource("15_lw2bx")]
 position = Vector2(-121, -63)
@@ -135,44 +380,412 @@ position = Vector2(847, -132)
 [node name="cordonFelveheto" parent="." instance=ExtResource("11_dsdnw")]
 position = Vector2(4217, -506)
 
-[node name="KeszPanel2" type="Sprite2D" parent="."]
-modulate = Color(0.629675, 0.629675, 0.629675, 1)
-z_index = -20
-position = Vector2(1476, 705)
-texture = ExtResource("18_cj32a")
-
-[node name="KeszPanel" type="Sprite2D" parent="."]
-modulate = Color(0.629675, 0.629675, 0.629675, 1)
-z_index = -20
-position = Vector2(518, 665.25)
-scale = Vector2(1, 0.9913)
-texture = ExtResource("18_cj32a")
-
-[node name="KeszPanel3" type="Sprite2D" parent="."]
-modulate = Color(0.629675, 0.629675, 0.629675, 1)
-z_index = -20
-position = Vector2(2499, 728)
-texture = ExtResource("18_cj32a")
-
 [node name="KeszPanel4" type="Sprite2D" parent="."]
 modulate = Color(0.629675, 0.629675, 0.629675, 1)
 z_index = -20
-position = Vector2(3596, 722)
+position = Vector2(3593, 1033)
+scale = Vector2(1.03012, 1)
 texture = ExtResource("18_cj32a")
-
-[node name="KeszPanel5" type="Sprite2D" parent="."]
-modulate = Color(0.629675, 0.629675, 0.629675, 1)
-z_index = -20
-position = Vector2(5052, 626)
-texture = ExtResource("18_cj32a")
-
-[node name="Panel01" parent="." instance=ExtResource("2_qi7us")]
-position = Vector2(5126, 549)
 
 [node name="ColorRect" type="ColorRect" parent="."]
 z_index = -31
-offset_left = -13295.0
-offset_top = -9184.0
-offset_right = 21134.0
-offset_bottom = 8206.0
+offset_left = -16328.0
+offset_top = -18487.0
+offset_right = 42168.0
+offset_bottom = 7738.0
 color = Color(0.75, 0, 0, 1)
+metadata/_edit_lock_ = true
+
+[node name="Szint" parent="." instance=ExtResource("14_md7kd")]
+position = Vector2(-1148, 1796)
+scale = Vector2(100, 1)
+
+[node name="KeszPanel5" type="Sprite2D" parent="."]
+modulate = Color(0.629675, 0.629675, 0.629675, 1)
+self_modulate = Color(0.485703, 0.485704, 0.485703, 1)
+show_behind_parent = true
+z_index = -20
+position = Vector2(4359, 777)
+scale = Vector2(1.03012, 1)
+texture = ExtResource("18_cj32a")
+
+[node name="KeszPanel6" type="Sprite2D" parent="."]
+modulate = Color(0.629675, 0.629675, 0.629675, 1)
+z_index = -20
+position = Vector2(5191, 1033)
+scale = Vector2(1.03012, 1)
+texture = ExtResource("18_cj32a")
+
+[node name="KeszPanel7" type="Sprite2D" parent="."]
+modulate = Color(0.629675, 0.629675, 0.629675, 1)
+self_modulate = Color(0.485703, 0.485704, 0.485703, 1)
+show_behind_parent = true
+z_index = -20
+position = Vector2(2832, 793)
+scale = Vector2(1.03012, 1)
+texture = ExtResource("18_cj32a")
+
+[node name="KeszPanel8" type="Sprite2D" parent="."]
+modulate = Color(0.629675, 0.629675, 0.629675, 1)
+z_index = -20
+position = Vector2(6786, 1041.5)
+scale = Vector2(1.03012, 1)
+texture = ExtResource("18_cj32a")
+
+[node name="KeszPanel9" type="Sprite2D" parent="."]
+modulate = Color(0.629675, 0.629675, 0.629675, 1)
+self_modulate = Color(0.485703, 0.485704, 0.485703, 1)
+show_behind_parent = true
+z_index = -20
+position = Vector2(7552, 785.5)
+scale = Vector2(1.03012, 1)
+texture = ExtResource("18_cj32a")
+
+[node name="KeszPanel10" type="Sprite2D" parent="."]
+modulate = Color(0.629675, 0.629675, 0.629675, 1)
+z_index = -20
+position = Vector2(8384, 1041.5)
+scale = Vector2(1.03012, 1)
+texture = ExtResource("18_cj32a")
+
+[node name="KeszPanel11" type="Sprite2D" parent="."]
+modulate = Color(0.629675, 0.629675, 0.629675, 1)
+self_modulate = Color(0.485703, 0.485704, 0.485703, 1)
+show_behind_parent = true
+z_index = -20
+position = Vector2(6025, 801.5)
+scale = Vector2(1.03012, 1)
+texture = ExtResource("18_cj32a")
+
+[node name="KeszPanel12" type="Sprite2D" parent="."]
+modulate = Color(0.629675, 0.629675, 0.629675, 1)
+z_index = -20
+position = Vector2(-2814, 1025.5)
+scale = Vector2(1.03012, 1)
+texture = ExtResource("18_cj32a")
+
+[node name="KeszPanel13" type="Sprite2D" parent="."]
+modulate = Color(0.629675, 0.629675, 0.629675, 1)
+self_modulate = Color(0.485703, 0.485704, 0.485703, 1)
+show_behind_parent = true
+z_index = -20
+position = Vector2(-2048, 769.5)
+scale = Vector2(1.03012, 1)
+texture = ExtResource("18_cj32a")
+
+[node name="KeszPanel14" type="Sprite2D" parent="."]
+modulate = Color(0.629675, 0.629675, 0.629675, 1)
+z_index = -20
+position = Vector2(-1216, 1025.5)
+scale = Vector2(1.03012, 1)
+texture = ExtResource("18_cj32a")
+
+[node name="KeszPanel15" type="Sprite2D" parent="."]
+modulate = Color(0.629675, 0.629675, 0.629675, 1)
+self_modulate = Color(0.485703, 0.485704, 0.485703, 1)
+show_behind_parent = true
+z_index = -20
+position = Vector2(-3575, 785.5)
+scale = Vector2(1.03012, 1)
+texture = ExtResource("18_cj32a")
+
+[node name="KeszPanel16" type="Sprite2D" parent="."]
+modulate = Color(0.629675, 0.629675, 0.629675, 1)
+z_index = -20
+position = Vector2(379, 1034)
+scale = Vector2(1.03012, 1)
+texture = ExtResource("18_cj32a")
+
+[node name="KeszPanel17" type="Sprite2D" parent="."]
+modulate = Color(0.629675, 0.629675, 0.629675, 1)
+self_modulate = Color(0.485703, 0.485704, 0.485703, 1)
+show_behind_parent = true
+z_index = -20
+position = Vector2(1145, 778)
+scale = Vector2(1.03012, 1)
+texture = ExtResource("18_cj32a")
+
+[node name="KeszPanel18" type="Sprite2D" parent="."]
+modulate = Color(0.629675, 0.629675, 0.629675, 1)
+z_index = -20
+position = Vector2(1977, 1034)
+scale = Vector2(1.03012, 1)
+texture = ExtResource("18_cj32a")
+
+[node name="KeszPanel19" type="Sprite2D" parent="."]
+modulate = Color(0.629675, 0.629675, 0.629675, 1)
+self_modulate = Color(0.485703, 0.485704, 0.485703, 1)
+show_behind_parent = true
+z_index = -20
+position = Vector2(-382, 794)
+scale = Vector2(1.03012, 1)
+texture = ExtResource("18_cj32a")
+
+[node name="cocacola" parent="." instance=ExtResource("16_bgosg")]
+position = Vector2(4152, -135)
+rotation = 0.966982
+
+[node name="AnimationPlayer3" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_euj3t")
+}
+autoplay = "new_animation"
+
+[node name="dezodor" parent="AnimationPlayer3" instance=ExtResource("17_3b377")]
+position = Vector2(5216, -608)
+
+[node name="Panel01" parent="." instance=ExtResource("2_qi7us")]
+position = Vector2(3480, 761)
+
+[node name="Panel04" parent="." instance=ExtResource("2_qi7us")]
+position = Vector2(3904, 761)
+
+[node name="Panel05" parent="." instance=ExtResource("2_qi7us")]
+position = Vector2(4320, 761)
+
+[node name="Panel06" parent="." instance=ExtResource("2_qi7us")]
+position = Vector2(4896, 417)
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Panel06"]
+position = Vector2(-691.249, -278.962)
+rotation = 3.14133
+shape = SubResource("RectangleShape2D_hnsq8")
+one_way_collision = true
+
+[node name="huto" parent="." instance=ExtResource("18_if6ye")]
+position = Vector2(7240, -431)
+rotation = 0.565351
+
+[node name="hutofasz" parent="." instance=ExtResource("19_ebnxx")]
+position = Vector2(6992, -183)
+rotation = -1.15051
+
+[node name="pepsi" parent="." instance=ExtResource("20_k73cj")]
+position = Vector2(6264, -471)
+rotation = 1.54774
+
+[node name="pepsi2" parent="." instance=ExtResource("20_k73cj")]
+position = Vector2(6368, -975)
+rotation = 1.58906
+
+[node name="dezodor" parent="." instance=ExtResource("17_3b377")]
+position = Vector2(7184, -1087)
+
+[node name="tuborg" parent="." instance=ExtResource("21_mi0wp")]
+position = Vector2(8208, -519)
+rotation = 1.63266
+
+[node name="Panel07" parent="." instance=ExtResource("2_qi7us")]
+position = Vector2(8928, 521)
+
+[node name="Panel08" parent="." instance=ExtResource("4_r8u4m")]
+position = Vector2(9680, 265)
+
+[node name="KeszPanel20" type="Sprite2D" parent="."]
+modulate = Color(0.629675, 0.629675, 0.629675, 1)
+z_index = -20
+position = Vector2(16393, 1041)
+scale = Vector2(1.03012, 1)
+texture = ExtResource("18_cj32a")
+
+[node name="Node" type="Node" parent="KeszPanel20"]
+
+[node name="KeszPanel21" type="Sprite2D" parent="."]
+modulate = Color(0.629675, 0.629675, 0.629675, 1)
+self_modulate = Color(0.485703, 0.485704, 0.485703, 1)
+show_behind_parent = true
+z_index = -20
+position = Vector2(17159, 785)
+scale = Vector2(1.03012, 1)
+texture = ExtResource("18_cj32a")
+
+[node name="KeszPanel22" type="Sprite2D" parent="."]
+modulate = Color(0.629675, 0.629675, 0.629675, 1)
+z_index = -20
+position = Vector2(17991, 1041)
+scale = Vector2(1.03012, 1)
+texture = ExtResource("18_cj32a")
+
+[node name="KeszPanel23" type="Sprite2D" parent="."]
+modulate = Color(0.629675, 0.629675, 0.629675, 1)
+self_modulate = Color(0.485703, 0.485704, 0.485703, 1)
+show_behind_parent = true
+z_index = -20
+position = Vector2(15632, 801)
+scale = Vector2(1.03012, 1)
+texture = ExtResource("18_cj32a")
+
+[node name="KeszPanel24" type="Sprite2D" parent="."]
+modulate = Color(0.629675, 0.629675, 0.629675, 1)
+z_index = -20
+position = Vector2(19586, 1049.5)
+scale = Vector2(1.03012, 1)
+texture = ExtResource("18_cj32a")
+
+[node name="KeszPanel25" type="Sprite2D" parent="."]
+modulate = Color(0.629675, 0.629675, 0.629675, 1)
+self_modulate = Color(0.485703, 0.485704, 0.485703, 1)
+show_behind_parent = true
+z_index = -20
+position = Vector2(20352, 793.5)
+scale = Vector2(1.03012, 1)
+texture = ExtResource("18_cj32a")
+
+[node name="KeszPanel26" type="Sprite2D" parent="."]
+modulate = Color(0.629675, 0.629675, 0.629675, 1)
+z_index = -20
+position = Vector2(21184, 1049.5)
+scale = Vector2(1.03012, 1)
+texture = ExtResource("18_cj32a")
+
+[node name="KeszPanel27" type="Sprite2D" parent="."]
+modulate = Color(0.629675, 0.629675, 0.629675, 1)
+self_modulate = Color(0.485703, 0.485704, 0.485703, 1)
+show_behind_parent = true
+z_index = -20
+position = Vector2(18825, 809.5)
+scale = Vector2(1.03012, 1)
+texture = ExtResource("18_cj32a")
+
+[node name="KeszPanel28" type="Sprite2D" parent="."]
+modulate = Color(0.629675, 0.629675, 0.629675, 1)
+z_index = -20
+position = Vector2(9986, 1033.5)
+scale = Vector2(1.03012, 1)
+texture = ExtResource("18_cj32a")
+
+[node name="KeszPanel29" type="Sprite2D" parent="."]
+modulate = Color(0.629675, 0.629675, 0.629675, 1)
+self_modulate = Color(0.485703, 0.485704, 0.485703, 1)
+show_behind_parent = true
+z_index = -20
+position = Vector2(10752, 777.5)
+scale = Vector2(1.03012, 1)
+texture = ExtResource("18_cj32a")
+
+[node name="KeszPanel30" type="Sprite2D" parent="."]
+modulate = Color(0.629675, 0.629675, 0.629675, 1)
+z_index = -20
+position = Vector2(11584, 1033.5)
+scale = Vector2(1.03012, 1)
+texture = ExtResource("18_cj32a")
+
+[node name="KeszPanel31" type="Sprite2D" parent="."]
+modulate = Color(0.629675, 0.629675, 0.629675, 1)
+self_modulate = Color(0.485703, 0.485704, 0.485703, 1)
+show_behind_parent = true
+z_index = -20
+position = Vector2(9225, 793.5)
+scale = Vector2(1.03012, 1)
+texture = ExtResource("18_cj32a")
+
+[node name="KeszPanel32" type="Sprite2D" parent="."]
+modulate = Color(0.629675, 0.629675, 0.629675, 1)
+z_index = -20
+position = Vector2(13179, 1042)
+scale = Vector2(1.03012, 1)
+texture = ExtResource("18_cj32a")
+
+[node name="KeszPanel33" type="Sprite2D" parent="."]
+modulate = Color(0.629675, 0.629675, 0.629675, 1)
+self_modulate = Color(0.485703, 0.485704, 0.485703, 1)
+show_behind_parent = true
+z_index = -20
+position = Vector2(13945, 786)
+scale = Vector2(1.03012, 1)
+texture = ExtResource("18_cj32a")
+
+[node name="KeszPanel34" type="Sprite2D" parent="."]
+modulate = Color(0.629675, 0.629675, 0.629675, 1)
+z_index = -20
+position = Vector2(14777, 1042)
+scale = Vector2(1.03012, 1)
+texture = ExtResource("18_cj32a")
+
+[node name="KeszPanel35" type="Sprite2D" parent="."]
+modulate = Color(0.629675, 0.629675, 0.629675, 1)
+self_modulate = Color(0.485703, 0.485704, 0.485703, 1)
+show_behind_parent = true
+z_index = -20
+position = Vector2(12418, 802)
+scale = Vector2(1.03012, 1)
+texture = ExtResource("18_cj32a")
+
+[node name="AnimationPlayer4" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_euusg")
+}
+autoplay = "pepsicsal"
+
+[node name="pepsi3" parent="AnimationPlayer4" instance=ExtResource("20_k73cj")]
+position = Vector2(10752, -344)
+
+[node name="Tuborg" type="Sprite2D" parent="."]
+position = Vector2(12896, -1031)
+rotation = 1.13935
+texture = ExtResource("22_ati1a")
+
+[node name="cordon" parent="." instance=ExtResource("23_8uny0")]
+position = Vector2(10680, -535)
+rotation = -3.20641
+
+[node name="dezodor2" parent="." instance=ExtResource("17_3b377")]
+position = Vector2(11536, -807)
+rotation = -0.334957
+
+[node name="taviranyito" parent="." instance=ExtResource("24_yqv16")]
+position = Vector2(13400, -87)
+rotation = 1.58208
+
+[node name="Panel09" parent="." instance=ExtResource("2_qi7us")]
+position = Vector2(13896, 161)
+
+[node name="cocacola2" parent="." instance=ExtResource("25_8aeg5")]
+position = Vector2(-528, 377)
+
+[node name="pizzaFelveheto3" parent="." instance=ExtResource("12_fioov")]
+position = Vector2(-529, -56)
+
+[node name="AnimationPlayer5" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_nvfbi")
+}
+autoplay = "pizza1"
+
+[node name="cocacola3" parent="AnimationPlayer5" instance=ExtResource("25_8aeg5")]
+position = Vector2(15056, -1056)
+
+[node name="AnimationPlayer6" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_3hmak")
+}
+autoplay = "pizza2"
+
+[node name="cocacola4" parent="AnimationPlayer6" instance=ExtResource("25_8aeg5")]
+position = Vector2(15800, -64)
+
+[node name="AnimationPlayer7" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_xgryu")
+}
+autoplay = "new_animation"
+
+[node name="cocacola5" parent="AnimationPlayer7" instance=ExtResource("25_8aeg5")]
+position = Vector2(16520, -1056)
+
+[node name="AnimationPlayer8" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_jkxh2")
+}
+autoplay = "new_animation"
+
+[node name="cocacola6" parent="AnimationPlayer8" instance=ExtResource("25_8aeg5")]
+position = Vector2(17272, -48)
+
+[node name="cordon2" parent="." instance=ExtResource("23_8uny0")]
+position = Vector2(17040, -1055)
+rotation = -3.20641
+
+[node name="tuborg2" parent="." instance=ExtResource("21_mi0wp")]
+position = Vector2(18736, -743)
+rotation = 1.36812

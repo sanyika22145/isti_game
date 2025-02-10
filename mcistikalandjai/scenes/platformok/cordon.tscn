@@ -1,16 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://dlv2oqipt3vh2"]
-
-[ext_resource type="Texture2D" uid="uid://qi1iwrl8ns3m" path="res://assets/targyak/cordon.png" id="1_niqe0"]
+[gd_scene load_steps=2 format=3 uid="uid://dlv2oqipt3vh2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5jl0p"]
-size = Vector2(505, 488)
+size = Vector2(505, 134)
 
 [node name="cordon" type="AnimatableBody2D"]
 
 [node name="Cordon" type="Sprite2D" parent="."]
 position = Vector2(37, 56)
-texture = ExtResource("1_niqe0")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(34.5, 62)
+position = Vector2(32, -48)
 shape = SubResource("RectangleShape2D_5jl0p")

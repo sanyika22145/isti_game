@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://qbwf0in1vs8v"]
+
+[ext_resource type="Script" path="res://scenes/targyak/hutotroll.gd" id="1_wio71"]
+[ext_resource type="AudioStream" uid="uid://bcxmn32tn7fle" path="res://assets/audio/fefferoni.mp3" id="3_32630"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ib1ht"]
+size = Vector2(2131.04, 158.839)
+
+[node name="hutofasz" type="Sprite2D"]
+position = Vector2(-1, -1)
+scale = Vector2(0.284295, 0.284295)
+script = ExtResource("1_wio71")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(1048.48, -85.9019)
+shape = SubResource("RectangleShape2D_ib1ht")
+
+[node name="pickup" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_32630")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

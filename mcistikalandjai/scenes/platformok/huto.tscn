@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://lunbcf5rpuw7"]
+
+[ext_resource type="Texture2D" uid="uid://bxdhmcm43ngtg" path="res://assets/targyak/huto.png" id="1_6k0gd"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_olmn0"]
+radius = 100.288
+height = 327.796
+
+[node name="Huto" type="Sprite2D"]
+position = Vector2(256, 216)
+rotation = 0.959262
+texture = ExtResource("1_6k0gd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(6.55015, 4.59299)
+shape = SubResource("CapsuleShape2D_olmn0")

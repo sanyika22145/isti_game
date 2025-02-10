@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://dbrukfqgec5gl"]
+
+[ext_resource type="Texture2D" uid="uid://pash4crw7mu2" path="res://assets/targyak/pizza.png" id="1_18pbu"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_as7fd"]
+radius = 39.9169
+height = 495.975
+
+[node name="cocacola" type="AnimatableBody2D"]
+
+[node name="Coca-cola" type="Sprite2D" parent="."]
+show_behind_parent = true
+z_index = -1
+position = Vector2(7, -148.25)
+scale = Vector2(1, 0.42185)
+texture = ExtResource("1_18pbu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -120)
+rotation = 1.58092
+shape = SubResource("CapsuleShape2D_as7fd")
