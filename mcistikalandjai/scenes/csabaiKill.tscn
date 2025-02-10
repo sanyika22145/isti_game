@@ -1,0 +1,45 @@
+[gd_scene load_steps=8 format=3 uid="uid://gg64xohtgvwt"]
+
+[ext_resource type="Script" path="res://script/killzone.gd" id="1_1iyco"]
+[ext_resource type="AudioStream" uid="uid://cw8livn88vha1" path="res://assets/audio/kurvaanyadat.mp3" id="2_ye4i6"]
+[ext_resource type="AudioStream" uid="uid://bipkw4t3yugf5" path="res://assets/audio/kurvaanyadat2.mp3" id="3_2wbk2"]
+[ext_resource type="Texture2D" uid="uid://1umxrrnj2fva" path="res://assets/targyak/csabai.png" id="4_il7k7"]
+[ext_resource type="AudioStream" uid="uid://tgvfmg2id4h0" path="res://assets/audio/betyar.mp3" id="5_33scy"]
+[ext_resource type="AudioStream" uid="uid://dr0iqth4vt7tb" path="res://assets/audio/nehogy.mp3" id="6_3e0q8"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_esixf"]
+radius = 56.0
+height = 256.0
+
+[node name="CsabaiKill" type="Area2D"]
+collision_mask = 2
+script = ExtResource("1_1iyco")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.3
+
+[node name="kurvaanyadat" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_ye4i6")
+volume_db = 1.874
+
+[node name="kurvaanyadat2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_2wbk2")
+volume_db = -8.432
+
+[node name="Csabai" type="Sprite2D" parent="."]
+position = Vector2(8, 8)
+scale = Vector2(0.678094, 0.678093)
+texture = ExtResource("4_il7k7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(8, 8)
+shape = SubResource("CapsuleShape2D_esixf")
+
+[node name="betyar" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_33scy")
+
+[node name="nehogy" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_3e0q8")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

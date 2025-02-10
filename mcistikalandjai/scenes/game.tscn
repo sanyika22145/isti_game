@@ -1,4 +1,4 @@
-[gd_scene load_steps=52 format=3 uid="uid://x3408vxotqj"]
+[gd_scene load_steps=64 format=3 uid="uid://x3408vxotqj"]
 
 [ext_resource type="PackedScene" uid="uid://c5ag6q51ckqel" path="res://scenes/player.tscn" id="1_wpt44"]
 [ext_resource type="PackedScene" uid="uid://dm8wfq4noafwr" path="res://scenes/targyak/cigi_felveheto.tscn" id="2_ixso0"]
@@ -20,11 +20,17 @@
 [ext_resource type="PackedScene" uid="uid://dtl1y84og8omh" path="res://scenes/platformok/hutogep.tscn" id="18_if6ye"]
 [ext_resource type="PackedScene" uid="uid://qbwf0in1vs8v" path="res://scenes/targyak/hutotroll.tscn" id="19_ebnxx"]
 [ext_resource type="PackedScene" uid="uid://chcm1lcefsvch" path="res://scenes/platformok/pepsi.tscn" id="20_k73cj"]
+[ext_resource type="Script" path="res://scenes/targyak/ending.gd" id="20_vssk8"]
 [ext_resource type="PackedScene" uid="uid://drops2dt7lvdt" path="res://scenes/platformok/tuborg.tscn" id="21_mi0wp"]
 [ext_resource type="Texture2D" uid="uid://dkgp0ht7f30cc" path="res://assets/targyak/Tuborg.png" id="22_ati1a"]
 [ext_resource type="PackedScene" uid="uid://dlv2oqipt3vh2" path="res://scenes/platformok/cordon.tscn" id="23_8uny0"]
 [ext_resource type="PackedScene" uid="uid://50pnstknpd0y" path="res://scenes/platformok/taviranyito.tscn" id="24_yqv16"]
 [ext_resource type="PackedScene" uid="uid://dbrukfqgec5gl" path="res://scenes/platformok/pizza.tscn" id="25_8aeg5"]
+[ext_resource type="PackedScene" uid="uid://wfkcpu0mbaej" path="res://scenes/platformok/legfuvo.tscn" id="26_w3goi"]
+[ext_resource type="PackedScene" uid="uid://gg64xohtgvwt" path="res://scenes/csabaiKill.tscn" id="27_hx55v"]
+[ext_resource type="Texture2D" uid="uid://pash4crw7mu2" path="res://assets/targyak/pizza.png" id="28_ta1a1"]
+[ext_resource type="Texture2D" uid="uid://ub0h7tp3e6pr" path="res://assets/targyak/athen.png" id="29_o4rm0"]
+[ext_resource type="FontFile" uid="uid://dmt8txgd6elfv" path="res://assets/argentum-sans.black.ttf" id="31_g8dae"]
 
 [sub_resource type="Animation" id="Animation_57kv4"]
 length = 0.001
@@ -311,6 +317,83 @@ _data = {
 "new_animation": SubResource("Animation_uj3dd")
 }
 
+[sub_resource type="Animation" id="Animation_c1skn"]
+resource_name = "kolbi"
+length = 3.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimationPlayer10/CsabaiKill:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(19880, -600), Vector2(14464, -600)]
+}
+
+[sub_resource type="Animation" id="Animation_ofe0o"]
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimationPlayer10/CsabaiKill:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.001, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(19880, -600), Vector2(19880, -600), Vector2(14448, -600)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_i5pw2"]
+_data = {
+"RESET": SubResource("Animation_ofe0o"),
+"kolbi": SubResource("Animation_c1skn")
+}
+
+[sub_resource type="Animation" id="Animation_3gy3y"]
+resource_name = "kolbi2"
+length = 1.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimationPlayer11/CsabaiKill2:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(20512, -600), Vector2(14432, -600)]
+}
+
+[sub_resource type="Animation" id="Animation_88vds"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimationPlayer11/CsabaiKill2:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(20512, -600)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_mgi4s"]
+_data = {
+"RESET": SubResource("Animation_88vds"),
+"kolbi2": SubResource("Animation_3gy3y")
+}
+
 [node name="Game" type="Node2D"]
 position = Vector2(304, -561)
 
@@ -327,7 +410,7 @@ position = Vector2(1017, -233)
 position = Vector2(3588, -803)
 
 [node name="player" parent="." instance=ExtResource("1_wpt44")]
-position = Vector2(-40, 85)
+position = Vector2(-48, -95)
 collision_layer = 3
 
 [node name="Camera2D" type="Camera2D" parent="player" groups=["camera"]]
@@ -560,6 +643,11 @@ rotation = 0.565351
 position = Vector2(6992, -183)
 rotation = -1.15051
 
+[node name="ENDING" parent="." instance=ExtResource("19_ebnxx")]
+position = Vector2(24904, -407.001)
+rotation = -1.15051
+script = ExtResource("20_vssk8")
+
 [node name="pepsi" parent="." instance=ExtResource("20_k73cj")]
 position = Vector2(6264, -471)
 rotation = 1.54774
@@ -738,6 +826,7 @@ position = Vector2(13400, -87)
 rotation = 1.58208
 
 [node name="Panel09" parent="." instance=ExtResource("2_qi7us")]
+z_index = 2
 position = Vector2(13896, 161)
 
 [node name="cocacola2" parent="." instance=ExtResource("25_8aeg5")]
@@ -787,5 +876,174 @@ position = Vector2(17040, -1055)
 rotation = -3.20641
 
 [node name="tuborg2" parent="." instance=ExtResource("21_mi0wp")]
-position = Vector2(18736, -743)
+position = Vector2(18128, -607)
 rotation = 1.36812
+
+[node name="AnimationPlayer9" type="AnimationPlayer" parent="."]
+
+[node name="legfuvo" parent="." instance=ExtResource("26_w3goi")]
+z_index = 2
+position = Vector2(20032, -31)
+
+[node name="AnimationPlayer10" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_i5pw2")
+}
+autoplay = "RESET"
+
+[node name="CsabaiKill" parent="AnimationPlayer10" instance=ExtResource("27_hx55v")]
+show_behind_parent = true
+position = Vector2(19880, -600)
+rotation = -1.57079
+
+[node name="AnimationPlayer11" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_mgi4s")
+}
+autoplay = "kolbi2"
+
+[node name="CsabaiKill2" parent="AnimationPlayer11" instance=ExtResource("27_hx55v")]
+position = Vector2(20512, -600)
+rotation = -1.57079
+
+[node name="KeszPanel36" type="Sprite2D" parent="."]
+modulate = Color(0.629675, 0.629675, 0.629675, 1)
+self_modulate = Color(0.485703, 0.485704, 0.485703, 1)
+show_behind_parent = true
+z_index = -21
+position = Vector2(15632, 81)
+scale = Vector2(1.03012, 1)
+texture = ExtResource("18_cj32a")
+
+[node name="KeszPanel37" type="Sprite2D" parent="."]
+modulate = Color(0.629675, 0.629675, 0.629675, 1)
+self_modulate = Color(0.485703, 0.485704, 0.485703, 1)
+show_behind_parent = true
+z_index = -21
+position = Vector2(17160, 121)
+scale = Vector2(1.03012, 1)
+texture = ExtResource("18_cj32a")
+
+[node name="KeszPanel38" type="Sprite2D" parent="."]
+modulate = Color(0.629675, 0.629675, 0.629675, 1)
+self_modulate = Color(0.485703, 0.485704, 0.485703, 1)
+show_behind_parent = true
+z_index = -22
+position = Vector2(15632, -271)
+scale = Vector2(1.03012, 1)
+texture = ExtResource("18_cj32a")
+
+[node name="Panel10" parent="." instance=ExtResource("2_qi7us")]
+z_index = 2
+position = Vector2(13896, 641)
+
+[node name="cordonFelveheto2" parent="." instance=ExtResource("2_ixso0")]
+position = Vector2(19398, -699)
+
+[node name="cordon3" parent="." instance=ExtResource("23_8uny0")]
+position = Vector2(21344, -383)
+rotation = -3.20641
+
+[node name="cordonFelveheto5" parent="." instance=ExtResource("16_xlla4")]
+position = Vector2(21288, -559)
+
+[node name="cordon4" parent="." instance=ExtResource("23_8uny0")]
+position = Vector2(22376, -359)
+rotation = -3.20641
+
+[node name="pizzaFelveheto4" parent="." instance=ExtResource("12_fioov")]
+position = Vector2(22319, -536)
+
+[node name="cordon5" parent="." instance=ExtResource("23_8uny0")]
+position = Vector2(23488, -583)
+rotation = -3.20641
+
+[node name="pizzaFelveheto5" parent="." instance=ExtResource("14_fh723")]
+position = Vector2(23232, -728)
+
+[node name="cordonFelveheto6" parent="." instance=ExtResource("15_lw2bx")]
+position = Vector2(21768, 8)
+
+[node name="cocacola3" parent="." instance=ExtResource("16_bgosg")]
+position = Vector2(24144, -239)
+rotation = 1.309
+
+[node name="Pizza" type="Sprite2D" parent="."]
+modulate = Color(0.864675, 0.864675, 0.864675, 1)
+show_behind_parent = true
+position = Vector2(22608, -1359)
+scale = Vector2(1.6505, 1.6505)
+texture = ExtResource("28_ta1a1")
+
+[node name="KeszPanel39" type="Sprite2D" parent="."]
+modulate = Color(0.629675, 0.629675, 0.629675, 1)
+self_modulate = Color(0.485703, 0.485704, 0.485703, 1)
+show_behind_parent = true
+z_index = -22
+position = Vector2(21912, 713)
+scale = Vector2(1.03012, 1)
+texture = ExtResource("18_cj32a")
+
+[node name="KeszPanel40" type="Sprite2D" parent="."]
+modulate = Color(0.629675, 0.629675, 0.629675, 1)
+z_index = -20
+position = Vector2(22752, 809)
+scale = Vector2(1.03012, 1)
+texture = ExtResource("18_cj32a")
+
+[node name="KeszPanel41" type="Sprite2D" parent="."]
+modulate = Color(0.629675, 0.629675, 0.629675, 1)
+self_modulate = Color(0.485703, 0.485704, 0.485703, 1)
+show_behind_parent = true
+z_index = -21
+position = Vector2(23392, 633)
+scale = Vector2(1.03012, 1)
+texture = ExtResource("18_cj32a")
+
+[node name="KeszPanel42" type="Sprite2D" parent="."]
+modulate = Color(0.629675, 0.629675, 0.629675, 1)
+z_index = -20
+position = Vector2(24144, 801)
+scale = Vector2(1.03012, 1)
+texture = ExtResource("18_cj32a")
+
+[node name="KeszPanel43" type="Sprite2D" parent="."]
+modulate = Color(0.629675, 0.629675, 0.629675, 1)
+self_modulate = Color(0.485703, 0.485704, 0.485703, 1)
+show_behind_parent = true
+z_index = -22
+position = Vector2(23400, 169)
+scale = Vector2(1.03012, 1)
+texture = ExtResource("18_cj32a")
+
+[node name="KeszPanel44" type="Sprite2D" parent="."]
+modulate = Color(0.629675, 0.629675, 0.629675, 1)
+z_index = -21
+position = Vector2(22768, 281)
+scale = Vector2(1.03012, 1)
+texture = ExtResource("18_cj32a")
+
+[node name="Athen" type="Sprite2D" parent="."]
+show_behind_parent = true
+position = Vector2(24960, -943)
+scale = Vector2(2.12835, 2.12835)
+texture = ExtResource("29_o4rm0")
+
+[node name="cordon6" parent="." instance=ExtResource("23_8uny0")]
+position = Vector2(24637, -371)
+rotation = -3.20641
+
+[node name="cordon7" parent="." instance=ExtResource("23_8uny0")]
+position = Vector2(25104, -371)
+rotation = -3.11453
+
+[node name="nyertel" type="Label" parent="."]
+offset_left = 24576.0
+offset_top = -792.0
+offset_right = 25328.0
+offset_bottom = -457.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 50
+theme_override_fonts/font = ExtResource("31_g8dae")
+theme_override_font_sizes/font_size = 90
+horizontal_alignment = 1

@@ -1,0 +1,42 @@
+[gd_scene load_steps=5 format=3 uid="uid://wfkcpu0mbaej"]
+
+[ext_resource type="Texture2D" uid="uid://cn3qricjnjryl" path="res://assets/targyak/levelseprogep.png" id="1_voc4b"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_obikl"]
+radius = 80.0
+height = 448.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_17sw7"]
+radius = 56.0
+height = 224.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_cdvxh"]
+radius = 88.0
+height = 833.333
+
+[node name="legfuvo" type="AnimatableBody2D"]
+position = Vector2(-112, -32)
+scale = Vector2(1.2, 1.2)
+
+[node name="Tuborg" type="Sprite2D" parent="."]
+position = Vector2(-2.00002, -14)
+scale = Vector2(2.024, 2.024)
+texture = ExtResource("1_voc4b")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(314, -151)
+rotation = 1.5708
+scale = Vector2(1.2, 1.2)
+shape = SubResource("CapsuleShape2D_obikl")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="."]
+position = Vector2(226, -239)
+rotation = 1.5708
+scale = Vector2(1.2, 1.2)
+shape = SubResource("CapsuleShape2D_17sw7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-53.3334, -13.3333)
+rotation = 1.5708
+scale = Vector2(1.2, 1.2)
+shape = SubResource("CapsuleShape2D_cdvxh")
